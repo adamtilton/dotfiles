@@ -113,6 +113,10 @@ set foldmethod=manual     " manual, marker, syntax, try set foldcolumn=2
 " Command line
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set cmdheight=2           " use 2 screen lines for command-line
+" always open command line window
+nnoremap : q:i
+nnoremap / q/i
+nnoremap ? q?i
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual appearance

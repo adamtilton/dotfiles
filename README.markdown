@@ -20,7 +20,7 @@ THE DOTFILES CREED
 
     Before (Git|SVN|etc) I swear this creed.  My dotfiles and myself are the
     defenders of my country.  We are the masters of our enemy.  We are the
-    saviors of my life.  So be it, until victory is teh Interweb's and there
+    saviors of my life.  So be it, until victory is teh Interwebs' and there
     is no enemy, but Peace.
 
 Adapted from _[The Rifleman's Creed](http://en.wikipedia.org/wiki/Rifleman%27s_Creed)_

@@ -112,7 +112,8 @@ set wildmenu              " tab-complete Ex commands
 set wildmode=list:longest 
 set completeopt=menu      " use popup menu to show completions
 " autocomplete functions and identifiers for languages
-setlocal omnifunc=syntaxcomplete#Complete
+"setlocal omnifunc=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete " C-X C-O
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding

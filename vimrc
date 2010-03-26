@@ -57,11 +57,21 @@ set showmatch             " show matching paren when bracked inserted
 map H ^
 map L $
 set whichwrap+=<,>,h,l    " allow cursor keys to wrap around columns
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Buffers
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " easier switch between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+if bufwinnr(1)
+  map - <C-W>-
+  map + <C-W>+
+endif
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggles
@@ -128,6 +138,7 @@ set scrolloff=3           " minimum number of lines above/below cursor (when scr
 map <silent> <F14>   :let &number=1-&number<CR>
 set laststatus=2          " always show the status line
 set showcmd               " Show (partial) command in the last line of the screen.
+set ttyfast               " improves smoothness
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs and spaces
@@ -164,3 +175,7 @@ au BufWritePost * call AutoModeChange()
 set cot+=menuone
 
 filetype plugin indent on
+
+
+" GPG Stuff
+let g:GPGUseAgent = 1

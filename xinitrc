@@ -11,5 +11,5 @@ autocutsel -selection PRIMARY -fork
 
 #exec wmii
 #exec startkde
-#exec awesome
-exec gnome-session
+exec awesome
+#exec gnome-session

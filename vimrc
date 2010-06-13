@@ -71,6 +71,7 @@ if bufwinnr(1)
   map - <C-W>-
   map + <C-W>+
 endif
+
 set splitbelow " split new vertical buffers beneath current buffer
 set splitright " split new horizontal buffers to the right of current buffer
 
@@ -182,3 +183,7 @@ filetype plugin indent on
 
 " GPG Stuff
 let g:GPGUseAgent = 1
+
+if has("gui_running")
+  set guifont=DejaVu\ Sans\ Mono\ 11
+endif

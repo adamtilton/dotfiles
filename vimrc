@@ -10,7 +10,7 @@
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible        " use vim defaults (not vi); !MUST BE FIRST LINE!
-set vb t_vb=            " neither bell nor vbell
+set novb t_vb=            " neither bell nor vbell
 set number              " line numbers on
 set mouse=a             " enable mouse in all modes
 set fileencoding=utf-8 

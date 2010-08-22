@@ -7,7 +7,7 @@ set message_cachedir    = ~/.mutt/bcache                        # cache bodies f
 set editor              = "/usr/bin/vim +/^$"                   # use vim and skip to the first blank line
 set ispell              = "/usr/bin/aspell -e -c"               # use aspell instead of ispell
 set mbox_type           = Maildir                               # mailbox type
-set folder              = /drum/d/noah@downbe.at                # mailbox location
+set folder              = /drum/d/noah@downbe.at                # mailbox location (offlineimap)
 set spoolfile           = +/INBOX                               # inbox
 set mbox                = "+[Gmail].All Mail"                   # 
 set postponed           = +"[Gmail].Drafts"                     # location of drafts
@@ -49,6 +49,7 @@ unset mark_old
 unset move                                                      # confirm mv $read_msg $mbox mailbox
 unset metoo                                                     # remove me from replies
 unset confirmappend                                             # confirm that we're appending
+
 # 
 set pager_stop
 set menu_scroll                                                 # scroll in menus 
@@ -85,4 +86,5 @@ macro index Z   "<shell-escape>offlineimap -q -o<return>" "sync IMAP"
 source ~/.mutt/mailboxes
 source ~/.mutt/colors.downbe
 
+# show version
 push V

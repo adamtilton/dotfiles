@@ -1,0 +1,90 @@
+# See:  http://www.mutt.org/doc/manual/manual-6.html
+#
+#
+# directories and commands
+set header_cache        = ~/.mutt/hcache                        # cache headers for speed
+set message_cachedir    = ~/.mutt/bcache                        # cache bodies for speed
+set editor              = "/usr/bin/vim +/^$"                   # use vim and skip to the first blank line
+set ispell              = "/usr/bin/aspell -e -c"               # use aspell instead of ispell
+set mbox_type           = Maildir                               # mailbox type
+set folder              = /drum/d/noah@downbe.at                # mailbox location (offlineimap)
+set spoolfile           = +/INBOX                               # inbox
+set mbox                = "+[Gmail].All Mail"                   # 
+set postponed           = +"[Gmail].Drafts"                     # location of drafts
+#set record              = +"[Gmail].Sent Mail"                  # location of sent mail
+set timeout             = 3                                     # n seconds Mutt waits for keypress before timeout
+set mail_check          = 0                                     # how often mutt should look for new mail
+set realname            = "Noah K. Tilton"                      # real name sent with mail
+set from                = "noah@downbe.at"                      # default From address
+# sort
+set sort                = 'threads'                             # thread style
+set sort_aux            = 'reverse-last-date-received'          # secondary sorting after threading. gmail-like
+set sort_browser        = 'reverse-date'                        # sort file browser by date reverse
+set attribution         = "On %d, %n wrote:"                    # set the forwarding attribution
+set forward_format      = "Fwd:  %s"                             # format for subject when forwarding
+set pager_index_lines   = 8                                     # show 8 messages when in pager
+set pager_context       = 5                                     # show five lines when skipping in pager
+set mailcap_path        = "~/.mutt/mailcap"                     # path to mailcap entries
+
+# trash patch
+set trash="/drum/d/noah@downbe.at/[Gmail].Trash"
+
+# sidebar patch
+set sidebar_visible     = yes
+set sidebar_width       = 25
+bind index,pager \CN    sidebar-next
+bind index,pager \CP    sidebar-prev
+bind index,pager \CO    sidebar-open
+color sidebar_new brightblue default
+# toggle sidebar visibility
+macro index,pager b '<enter-command>toggle sidebar_visible<enter>'
+# remap bounce
+bind index B bounce-message
+
+
+# bool options
+unset mime_forward        
+unset record
+unset mark_old
+unset move                                                      # confirm mv $read_msg $mbox mailbox
+unset metoo                                                     # remove me from replies
+unset confirmappend                                             # confirm that we're appending
+
+# 
+set pager_stop
+set menu_scroll                                                 # scroll in menus 
+set smart_wrap
+set use_from
+set envelope_from
+set beep_new                                                    # beep on new mail
+set edit_headers                                                # edit msg headers while sending/replying
+set check_new                                                   # check for new mail delivered while mailbox open
+set reverse_name                                                # change From line to match received address
+set fast_reply                                                  # skip initial prompts for sending/forwarding
+set reply_to                                                    # reply to Reply-To header, not From header
+set include                                                     # include a copy of the message in the reply
+set forward_quote                                               # include and quote forwarded messages
+set tilde                                                       # pad blank lines in pager with tilde
+set fcc_attach                                                  # save attachments on outgoing messages
+
+# configuration commands
+alternative_order       text/plain text/html                    # prefer text to html
+auto_view               text/html                               # view html automatically
+
+bind editor <space> noop                                        # allow spaces in macros
+macro index d "<save-message>+[Gmail].Trash<enter>"             "move message to the trash"
+macro index s "<save-message>+[Gmail].Spam<enter>"              "mark message as spam"
+macro index y "<save-message>+[Gmail].All Mail<enter>"          "move message to archive"
+macro index E "<change-folder>+[Gmail].All Mail<enter><limit>~B " "search everything"
+
+macro index B   "<limit>~b " "search message bodies"
+macro index I   "<change-folder>!<enter>" "go to Inbox"
+macro index P   "<pipe-message>cat > ~/" "save message as"
+macro index Z   "<shell-escape>offlineimap -q -o<return>" "sync IMAP"
+
+
+source ~/.mutt/mailboxes
+source ~/.mutt/colors.downbe
+
+# show version
+push V

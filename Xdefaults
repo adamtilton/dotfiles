@@ -1,11 +1,11 @@
 urxvt*background:black
 urxvt*boldColors:on
-urxvt*boldFont:xft:DejaVu Sans Mono:bold:pixelsize=14
+urxvt*boldFont:xft:terminus:pixelsize=14
+urxvt*font:xft:terminus:pixelsize=14
 urxvt*buffered:true
 urxvt*cursorColor:red
 urxvt*depth:32
 urxvt*fading:0
-urxvt*font:xft:DejaVu Sans Mono:pixelsize=14
 urxvt*foreground:white
 urxvt*inheritPixmap:true
 urxvt*jumpScroll:true
@@ -22,6 +22,7 @@ urxvt*transparent:false
 urxvt*transparentscrollbar:true
 urxvt*transpscrollbar:true
 urxvt*urlLauncher:firefox
+urxvt.urgentOnBell: True
 
 ! black
 urxvt*color0  : #2E3436

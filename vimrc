@@ -187,3 +187,4 @@ let g:GPGUseAgent = 1
 if has("gui_running")
   set guifont=DejaVu\ Sans\ Mono\ 11
 endif
+set spell spelllang=en_us

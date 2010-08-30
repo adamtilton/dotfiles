@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require 'cgi'
 
 class Cmus
 
@@ -49,4 +50,4 @@ def awesome_status
 
 end
 
-puts awesome_status
+puts CGI.escapeHTML(awesome_status)

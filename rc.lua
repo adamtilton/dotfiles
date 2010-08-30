@@ -401,7 +401,7 @@ mybwibox.widgets = {
         delimiter,
         yaourtbox,
         delimiter,
-        rtorrentbox
+        rtorrentbox,
         -- delimiter,
         layout = awful.widget.layout.horizontal.leftright
 }
@@ -413,16 +413,16 @@ delimiter.text = delim
 
 -- 
 -- timers
-10_second_timer= timer { timeout = 10}
-10_second_timer:add_signal("timeout", function()
+ten_second_timer = timer { timeout = 10}
+ten_second_timer:add_signal("timeout", function()
         yaourtbox.text = yaourt_updates()
         rtorrentbox.text = rtorrent_status()
 end)
-10_second_timer:start()
+ten_second_timer:start()
 
 
-1_second_timer = timer { timeout = 1}
-1_second_timer:add_signal("timeout", function()
+one_second_timer = timer { timeout = 1}
+one_second_timer:add_signal("timeout", function()
         cmusbox.text = cmus_status()
 end)
-1_second_timer:start()
+one_second_timer:start()

@@ -92,7 +92,7 @@ theme.layout_spiral  = "/usr/share/awesome/themes/default/layouts/spiralw.png"
 theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
 
 -- theme.awesome_icon = "/usr/share/awesome/icons/n0ah16.png"
-theme.awesome_icon = "/home/noah/.config/awesome/themes/downbe/n0ah_green_16x16.png"
+theme.awesome_icon = "/home/noah/.config/awesome/themes/downbe/nktvansface_16x16.png"
 
 return theme
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:encoding=utf-8:textwidth=80

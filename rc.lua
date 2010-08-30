@@ -48,7 +48,7 @@ layouts =
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+    tags[s] = awful.tag({ "term", "web", "dev", "scrap"}, s, layouts[1])
 end
 -- }}}
 
@@ -228,6 +228,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)     end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,1)end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1)end),
+
+    -- keybindings
+    awful.key({ }, "Print", function () awful.util.spawn("gnome-screenshot")end),
 
     -- Prompt
     awful.key({ modkey },     "p",     function () mypromptbox[mouse.screen]:run() end),

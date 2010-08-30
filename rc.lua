@@ -355,3 +355,60 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+
+-- ==============================================================[Status bar stuff ]
+
+-- TODO make this less verbose, learn lua
+
+-- Functions
+function yaourt_updates()
+        local y = awful.util.pread("/usr/bin/yaourt -Qu|wc -l|tr '\n' ' '")
+        return y .. 'yaourt updates available'
+end
+
+function cmus_status()
+        local c = awful.util.pread("/home/noah/.config/awesome/scripts/cmus-status.rb")
+        return 'cmus ' .. c
+end
+
+-- setup boxes for each screen
+mybwibox = {}
+yaourtbox = {}
+cmusbox = {}
+
+mybwibox = awful.wibox({ position = "bottom", screen = 1})
+delim = ' | '
+
+for s=1, screen.count() do
+        yaourtbox = widget({ type = "textbox", layout = awful.widget.layout.horizontal.leftright })
+        cmusbox = widget({ type = "textbox", layout = awful.widget.layout.horizontal.leftright })
+        delimiter = widget({ type = "textbox", })
+end
+
+mybwibox.widgets = {
+        cmusbox,
+        delimiter,
+        yaourtbox,
+        -- delimiter,
+        layout = awful.widget.layout.horizontal.leftright
+}
+
+cmusbox.text = cmus_status()
+yaourtbox.text = yaourt_updates()
+delimiter.text = delim
+
+-- 
+-- timers
+yaourttimer = timer { timeout = 10}
+yaourttimer:add_signal("timeout", function()
+        yaourtbox.text = yaourt_updates()
+end)
+yaourttimer:start()
+
+
+cmustimer = timer { timeout = 1}
+cmustimer:add_signal("timeout", function()
+        cmusbox.text = cmus_status()
+end)
+cmustimer:start()

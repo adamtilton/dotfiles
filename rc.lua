@@ -371,14 +371,20 @@ function yaourt_updates()
 end
 
 function cmus_status()
-        local c = awful.util.pread("/home/noah/.config/awesome/scripts/cmus-status.rb")
+        local c = awful.util.pread("/home/noah/.config/awesome/scripts/cmus_status.rb")
         return 'cmus ' .. c
+end
+
+function rtorrent_status()
+        local r = awful.util.pread("/home/noah/.config/awesome/scripts/rtorrent_status.sh")
+        return 'rtorrent ' .. r
 end
 
 -- setup boxes for each screen
 mybwibox = {}
 yaourtbox = {}
 cmusbox = {}
+rtorrentbox = {}
 
 mybwibox = awful.wibox({ position = "bottom", screen = 1})
 delim = ' | '
@@ -386,6 +392,7 @@ delim = ' | '
 for s=1, screen.count() do
         yaourtbox = widget({ type = "textbox", layout = awful.widget.layout.horizontal.leftright })
         cmusbox = widget({ type = "textbox", layout = awful.widget.layout.horizontal.leftright })
+        rtorrentbox = widget({ type = "textbox", layout = awful.widget.layout.horizontal.leftright })
         delimiter = widget({ type = "textbox", })
 end
 
@@ -393,25 +400,29 @@ mybwibox.widgets = {
         cmusbox,
         delimiter,
         yaourtbox,
+        delimiter,
+        rtorrentbox
         -- delimiter,
         layout = awful.widget.layout.horizontal.leftright
 }
 
 cmusbox.text = cmus_status()
 yaourtbox.text = yaourt_updates()
+rtorrentbox.text = rtorrent_status()
 delimiter.text = delim
 
 -- 
 -- timers
-yaourttimer = timer { timeout = 10}
-yaourttimer:add_signal("timeout", function()
+10_second_timer= timer { timeout = 10}
+10_second_timer:add_signal("timeout", function()
         yaourtbox.text = yaourt_updates()
+        rtorrentbox.text = rtorrent_status()
 end)
-yaourttimer:start()
+10_second_timer:start()
 
 
-cmustimer = timer { timeout = 1}
-cmustimer:add_signal("timeout", function()
+1_second_timer = timer { timeout = 1}
+1_second_timer:add_signal("timeout", function()
         cmusbox.text = cmus_status()
 end)
-cmustimer:start()
+1_second_timer:start()

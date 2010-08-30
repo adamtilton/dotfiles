@@ -362,7 +362,7 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 
 -- ==============================================================[Status bar stuff ]
 
--- TODO make this less verbose, learn lua
+-- TODO make this less verbose, stop abusing lua
 
 -- Functions
 function yaourt_updates()
@@ -380,10 +380,16 @@ function rtorrent_status()
         return 'rtorrent ' .. r
 end
 
+function uptime()
+        local r = awful.util.pread("uptime|cut -d ' ' -f 3-")
+        return r
+end
+
 -- setup boxes for each screen
 mybwibox = {}
 yaourtbox = {}
 cmusbox = {}
+uptimebox = {}
 rtorrentbox = {}
 
 mybwibox = awful.wibox({ position = "bottom", screen = 1})
@@ -393,6 +399,7 @@ for s=1, screen.count() do
         yaourtbox = widget({ type = "textbox", layout = awful.widget.layout.horizontal.leftright })
         cmusbox = widget({ type = "textbox", layout = awful.widget.layout.horizontal.leftright })
         rtorrentbox = widget({ type = "textbox", layout = awful.widget.layout.horizontal.leftright })
+        uptimebox = widget({ type = "textbox", layout = awful.widget.layout.horizontal.leftright })
         delimiter = widget({ type = "textbox", })
 end
 
@@ -402,11 +409,14 @@ mybwibox.widgets = {
         yaourtbox,
         delimiter,
         rtorrentbox,
+        delimiter,
+        uptimebox,
         -- delimiter,
         layout = awful.widget.layout.horizontal.leftright
 }
 
 cmusbox.text = cmus_status()
+uptimebox.text = uptime()
 yaourtbox.text = yaourt_updates()
 rtorrentbox.text = rtorrent_status()
 delimiter.text = delim
@@ -424,5 +434,6 @@ ten_second_timer:start()
 one_second_timer = timer { timeout = 1}
 one_second_timer:add_signal("timeout", function()
         cmusbox.text = cmus_status()
+        uptimebox.text = uptime()
 end)
 one_second_timer:start()

@@ -25,7 +25,7 @@ class Cmus
   end
 
   def now_playing
-    @status == 'status stopped' ? self.status_symbol : [self.status_symbol,self.play_stub].join(' ')
+    @status == 'status stopped' ? self.status_symbol : [self.progress,self.status_symbol,self.play_stub].join(' ')
   end
 
   def progress
@@ -44,7 +44,7 @@ def awesome_status
     return 'not running' 
   else 
     cmus = Cmus.new(cmus_remote_q)
-    return [cmus.now_playing,cmus.progress].join(' ')
+    return cmus.now_playing
   end
 
 end

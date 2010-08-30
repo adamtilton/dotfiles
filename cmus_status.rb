@@ -32,7 +32,7 @@ class Cmus
     position = @position.sub('position ','').to_f
     duration = @duration.sub('duration ','').to_i
     percentage = (position / duration).round(2)
-    return sprintf("[%-50s] #{(percentage*100).to_i}%", "#" * (50.0 * percentage))
+    return sprintf("[%-20s] #{(percentage*100).to_i}%", "#" * (20.0 * percentage))
   end
 
 end

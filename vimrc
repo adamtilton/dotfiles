@@ -1,22 +1,6 @@
-" This my vimrc has been collected from the vast reaches of the 'net.
-"
-"   See also: http://delicious.com/noah/vim
-"
-"   ``VIM is the greatest editor since the stone chisel.''
-"                                     
-"                               - Jose Unpingco
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible        " use vim defaults (not vi); !MUST BE FIRST LINE!
-set novb t_vb=            " neither bell nor vbell
-set number              " line numbers on
-set mouse=a             " enable mouse in all modes
-set fileencoding=utf-8 
-set timeoutlen=0        " time to wait after ESC
-set history=400         " number of lines of Ex command history to save
-set hidden              " allow to change buffer w/o saving
+set background=dark
+set number
 " statusline
 " cf the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 " format markers:
@@ -47,34 +31,34 @@ filetype plugin on
 set t_Co=256
 set background=dark
 syntax on                   " syntax highlighting on
-colorscheme lettuce
+"colorscheme lettuce
 set showmatch             " show matching paren when bracked inserted
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Movement
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set H and L to first and last character of line
-map H ^
-map L $
+" map H ^
+" map L $
 set whichwrap+=<,>,h,l    " allow cursor keys to wrap around columns
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Buffers
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" easier switch between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-if bufwinnr(1)
-  map - <C-W>-
-  map + <C-W>+
-endif
-
-set splitbelow " split new vertical buffers beneath current buffer
-set splitright " split new horizontal buffers to the right of current buffer
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Buffers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" easier switch between windows
+"map <C-j> <C-W>j
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
+"if bufwinnr(1)
+"  map - <C-W>-
+"  map + <C-W>+
+"endif
+"
+"set splitbelow " split new vertical buffers beneath current buffer
+"set splitright " split new horizontal buffers to the right of current buffer
+"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggles
@@ -121,17 +105,17 @@ set omnifunc=syntaxcomplete#Complete " C-X C-O
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nofoldenable          " open all folds
-set foldmethod=manual     " manual, marker, syntax, try set foldcolumn=2
+"set nofoldenable          " open all folds
+"set foldmethod=manual     " manual, marker, syntax, try set foldcolumn=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Command line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set cmdwinheight=20       " use 20 screen lines for command-line window
-" always open command line window
-nnoremap : q:i
-nnoremap / q/i
-nnoremap ? q?i
+"set cmdwinheight=20       " use 20 screen lines for command-line window
+"" always open command line window
+"nnoremap : q:i
+"nnoremap / q/i
+"nnoremap ? q?i
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual appearance
@@ -155,12 +139,6 @@ set autoindent
 set shiftwidth=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                               AutoModeChange()
@@ -178,13 +156,6 @@ au BufWritePost * call AutoModeChange()
 " show scratch function prototype even when only one match
 set cot+=menuone
 
-filetype plugin indent on
-
-
-" GPG Stuff
-let g:GPGUseAgent = 1
-
-if has("gui_running")
-  set guifont=DejaVu\ Sans\ Mono\ 11
-endif
 set spell spelllang=en_us
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'

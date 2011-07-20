@@ -1,5 +1,4 @@
 set nocompatible        " use vim defaults (not vi); !MUST BE FIRST LINE!
-set background=dark
 set number
 " statusline
 " cf the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
@@ -29,9 +28,9 @@ filetype on             " enable filetype plugins
 filetype indent on
 filetype plugin on
 set t_Co=256
-set background=dark
 syntax on                   " syntax highlighting on
-"colorscheme lettuce
+colorscheme fu 
+set background=dark
 set showmatch             " show matching paren when bracked inserted
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -67,7 +66,6 @@ set whichwrap+=<,>,h,l    " allow cursor keys to wrap around columns
 set pastetoggle=<F6>    
 " F7 -- spellchecking
 map <F7> :setlocal spell! spelllang=en_us<CR> 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Wrapping, yo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -105,7 +103,7 @@ set omnifunc=syntaxcomplete#Complete " C-X C-O
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set nofoldenable          " open all folds
+set nofoldenable          " open all folds
 "set foldmethod=manual     " manual, marker, syntax, try set foldcolumn=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -142,20 +140,20 @@ set shiftwidth=2
 " Functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                               AutoModeChange()
-function AutoModeChange()
-  " Automatically give executable permissions if file begins with #!
-  " and contains '/bin/' in the path
-  if getline(1) =~ "^#!"
-    if getline(1) =~ "/bin/"
-      silent !chmod 755 %
-    endif
-  endif
-endfunction
-au BufWritePost * call AutoModeChange()
+" function AutoModeChange()
+"   " Automatically give executable permissions if file begins with #!
+"   " and contains '/bin/' in the path
+"   if getline(1) =~ "^#!"
+"     if getline(1) =~ "/bin/"
+"       silent !chmod 755 %
+"     endif
+"   endif
+" endfunction
+" au BufWritePost * call AutoModeChange()
 
 " show scratch function prototype even when only one match
 set cot+=menuone
 
-set spell spelllang=en_us
+"set spell spelllang=en_us
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'

@@ -2,15 +2,16 @@ set nosmartindent
 setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4
-setlocal textwidth=0
+setlocal textwidth=80
 setlocal smarttab
 setlocal expandtab
+setlocal foldmethod=indent
 
 set foldexpr=PythonFoldExpr(v:lnum)
 set foldtext=PythonFoldText()
 
 
-map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+map <buffer> <S-e> :w<CR>:!/usr/bin/env python2 % <CR>
 
 function! PythonFoldText()
 

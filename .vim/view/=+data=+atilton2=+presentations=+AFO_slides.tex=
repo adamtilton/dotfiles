@@ -37,7 +37,7 @@ vmap <buffer> <silent> â <Plug>Tex_MathBF
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal noarabic
-setlocal autoindent
+setlocal noautoindent
 setlocal autoread
 setlocal nobinary
 setlocal bufhidden=
@@ -130,18 +130,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-97,119fold
-162,175fold
-97
-normal zo
-162
-normal zo
-let s:l = 222 - ((14 * winheight(0) + 27) / 54)
+29,51fold
+29
+normal zc
+let s:l = 86 - ((8 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-222
-normal! 031l
+86
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

@@ -37,7 +37,7 @@ vmap <buffer> <silent> â <Plug>Tex_MathBF
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal noarabic
-setlocal noautoindent
+setlocal autoindent
 setlocal autoread
 setlocal nobinary
 setlocal bufhidden=
@@ -102,14 +102,14 @@ setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
-setlocal readonly
+setlocal noreadonly
 setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=4
 setlocal noshortname
 setlocal nosmartindent
-setlocal softtabstop=0
+setlocal softtabstop=4
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
@@ -358,11 +358,11 @@ normal zc
 normal zc
 603
 normal zc
-let s:l = 348 - ((21 * winheight(0) + 27) / 54)
+let s:l = 452 - ((12 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-348
+452
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

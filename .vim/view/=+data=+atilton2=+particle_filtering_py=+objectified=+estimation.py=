@@ -1,6 +1,9 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 map <buffer> E :w:!/usr/bin/env python % 
+map <buffer> F :call ToggleFold()
+map <buffer> f za
+map <buffer> gd /def  
 setlocal noarabic
 setlocal autoindent
 setlocal autoread
@@ -25,19 +28,19 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != ''
-setlocal filetype=
+if &filetype != 'python'
+setlocal filetype=python
 endif
 setlocal foldcolumn=0
-setlocal nofoldenable
-setlocal foldexpr=0
+setlocal foldenable
+setlocal foldexpr=PythonFoldExpr(v:lnum)
 setlocal foldignore=#
 setlocal foldlevel=0
 setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
+setlocal foldmethod=indent
 setlocal foldminlines=1
 setlocal foldnestmax=20
-setlocal foldtext=foldtext()
+setlocal foldtext=PythonFoldText()
 setlocal formatexpr=
 setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
@@ -46,8 +49,8 @@ setlocal iminsert=0
 setlocal imsearch=0
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal indentexpr=GetPythonIndent(v:lnum)
+setlocal indentkeys=!^F,o,O,<:>,0),0],0},=elif,=except
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keymap=
@@ -71,10 +74,10 @@ setlocal readonly
 setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
-setlocal shiftwidth=2
+setlocal shiftwidth=4
 setlocal noshortname
 setlocal nosmartindent
-setlocal softtabstop=0
+setlocal softtabstop=4
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
@@ -83,24 +86,99 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != ''
-setlocal syntax=
+if &syntax != 'python'
+setlocal syntax=python
 endif
-setlocal tabstop=8
+setlocal tabstop=4
 setlocal tags=
-setlocal textwidth=72
+setlocal textwidth=0
 setlocal thesaurus=
 setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 51 - ((50 * winheight(0) + 27) / 54)
+119
+normal zo
+121
+normal zo
+122
+normal zo
+124
+normal zo
+126
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+133
+normal zo
+121
+normal zo
+180
+normal zo
+190
+normal zo
+194
+normal zo
+196
+normal zo
+198
+normal zo
+194
+normal zo
+190
+normal zo
+119
+normal zo
+471
+normal zo
+572
+normal zo
+574
+normal zo
+632
+normal zo
+724
+normal zo
+726
+normal zo
+789
+normal zo
+791
+normal zo
+789
+normal zo
+632
+normal zo
+471
+normal zo
+let s:l = 574 - ((49 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-51
-normal! 012l
+574
+normal! 03l
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

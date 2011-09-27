@@ -157,3 +157,4 @@ set cot+=menuone
 "set spell spelllang=en_us
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+filetype plugin indent on

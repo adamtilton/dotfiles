@@ -7,4 +7,4 @@ setlocal smarttab
 setlocal nospell
 
 
-map <buffer> <S-e> :w<CR>:!Makefile  <CR>
+map <buffer> <S-e> :w<CR>:!make  <CR>

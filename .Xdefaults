@@ -32,8 +32,8 @@ urxvt*termName: rxvt-256color
 urxvt*transparentscrollbar:true
 urxvt*transpscrollbar:true
 
-urxvt*font: xft:Liberation Mono:size=11
-urxvt*boldFont: xft: Liberation Mono: size=11
+urxvt*font: xft:Liberation Mono:size=16
+urxvt*boldFont: xft: Liberation Mono: size=16
 
 
 /*

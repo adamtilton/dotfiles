@@ -1,0 +1,15 @@
+{
+   "content_scripts": [ {
+      "css": [ "print.css" ],
+      "matches": [ "http://github.com/*/*/wiki/*", "https://github.com/*/*/wiki/*" ]
+   } ],
+   "description": "Make GitHub Wiki Pages Printable.",
+   "icons": {
+      "48": "Icon-48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCoTUYCbCOw8o5YP5qnqvp4/rdkMR90FOmTZpapIy66Go4ZWt2+YzjxSo/c0+Vkasem6MlXUrYCs/y11Rux2E+TX74sZDza7h0VzkiJMIySr5ADRUc3wpljODN2bTbHVRXHXao1mfIOKWZDRMPhKqvlHxR/SplKgb8UL1rYHuwdSQIDAQAB",
+   "name": "GitHub Wiki Print",
+   "permissions": [ "http://github.com/", "https://github.com/" ],
+   "update_url": "http://iamamused.github.com/github-cross-link/update/chrome.xml",
+   "version": "1.1"
+}

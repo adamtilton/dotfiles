@@ -1,0 +1,98 @@
+{
+   "checksum": "89e2af5eb028a3d4bb1a811c9f3ab642",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "12960865668070458",
+            "id": "12",
+            "name": "gitready.com",
+            "type": "url",
+            "url": "http://gitready.com/"
+         }, {
+            "date_added": "12960874359463136",
+            "id": "13",
+            "name": "code.google.com",
+            "type": "url",
+            "url": "http://code.google.com/appengine/docs/python/gettingstarted/"
+         }, {
+            "date_added": "12961044268704593",
+            "id": "14",
+            "name": "My+Wishlist-218462-g.html",
+            "type": "url",
+            "url": "http://www.wanelo.com/PaigeHiggins/My+Wishlist-218462-g.html"
+         } ],
+         "date_added": "11644473600000000",
+         "date_modified": "12961566092999142",
+         "id": "1",
+         "name": "Bookmarks Bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [ {
+               "date_added": "12958253482240725",
+               "id": "5",
+               "name": "EventSnapshot.aspx",
+               "type": "url",
+               "url": "https://www.regonline.com/activereports/ReportServer/EventSnapshot.aspx?rpttype=110&eventid=996008&EventSessionId=Direct20110819124959293pf4qh055wgnir3rjhhmnwujj&eqs=ZmFZZ3J1NnpINWZHZnhiVjAzV2ZtUT09"
+            }, {
+               "date_added": "12958253517910119",
+               "id": "6",
+               "name": "Registration Report",
+               "type": "url",
+               "url": "https://www.regonline.com/activereports/smartLink.aspx?eventid=XYwHfJzqTa8=&crid=676926"
+            }, {
+               "date_added": "12958253546022136",
+               "id": "7",
+               "name": "The Symposium on Emerging Topics in Control and Modeling: Cyber-Physical Systems | Coordinated Science Laboratory",
+               "type": "url",
+               "url": "http://www.csl.uiuc.edu/emerging-topics"
+            }, {
+               "date_added": "12958503296982209",
+               "id": "8",
+               "name": "stumble - Google Search",
+               "type": "url",
+               "url": "http://www.google.com/search?sourceid=chrome&ie=UTF-8&q=stumble"
+            } ],
+            "date_added": "12958253469942193",
+            "date_modified": "12961566092999169",
+            "id": "4",
+            "name": "Symposium",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "12958772727359911",
+               "id": "10",
+               "name": "CS 229: Machine Learning",
+               "type": "url",
+               "url": "http://www.stanford.edu/class/cs229/"
+            }, {
+               "date_added": "12958772859775369",
+               "id": "11",
+               "name": "Artificial Intelligence: A Modern Approach",
+               "type": "url",
+               "url": "http://aima.cs.berkeley.edu/"
+            } ],
+            "date_added": "12958772715183440",
+            "date_modified": "12961566092999186",
+            "id": "9",
+            "name": "Class",
+            "type": "folder"
+         } ],
+         "date_added": "11644473600000000",
+         "date_modified": "12961038520290781",
+         "id": "2",
+         "name": "Other Bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "11644473600000000",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Synced Bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

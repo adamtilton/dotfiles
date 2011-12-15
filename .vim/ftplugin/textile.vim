@@ -5,7 +5,7 @@
 setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4
-setlocal textwidth=80
+setlocal textwidth=0
 
 command! -nargs=0 TextileRenderFile call TextileRenderBufferToFile()
 command! -nargs=0 TextileRenderTab call TextileRenderBufferToTab()

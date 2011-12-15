@@ -1,0 +1,25 @@
+<html>
+	<head>
+    <script type="text/javascript" src="libs/jquery/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="libs/json2.js"></script>
+    <script type="text/javascript" src="libs/simpledateformat.js"></script>
+    
+    <script type="text/javascript" src="libs/evernote-cr/evernoteChromeExtension.js"></script>
+    
+    <script type="text/javascript">
+      var LOG = null;
+      $(document).ready(function backgroundHtml() {
+        Evernote.Logger.setGlobalLevel(Evernote.chromeExtension.logger.level);
+        Evernote.Utils.updateBadge(Evernote.getContext());
+        Evernote.chromeExtension.initContextMenu();
+        LOG = Evernote.chromeExtension.logger;
+        window.onerror = function(errorMsg, url, lineNumber) {
+          LOG.exception("\n" + url + ":" + lineNumber + ": " + errorMsg + "\n");
+        }
+        LOG.info("-------- STARTING ------------");
+      });
+    </script>
+	</head>
+	<body>
+	</body>
+</html>

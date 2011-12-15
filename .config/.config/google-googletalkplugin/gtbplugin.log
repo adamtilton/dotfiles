@@ -1,0 +1,8 @@
+[000:005] Warning(clientchannel.cc:561): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
+[000:006] Warning(clientchannel.cc:404): Could not initiate GoogleTalkPlugin connection
+[000:006] Warning(clientchannel.cc:531): Failed to get GoogleTalkPlugin path. Trying default.
+[2222:465] Error(scriptinterface.cc:288): Passed a non-object for onmessasge_callback
+[2241:264] Warning(clientchannel.cc:561): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
+[2241:264] Warning(clientchannel.cc:404): Could not initiate GoogleTalkPlugin connection
+[2241:264] Warning(clientchannel.cc:531): Failed to get GoogleTalkPlugin path. Trying default.
+[4836:511] Error(scriptinterface.cc:288): Passed a non-object for onmessasge_callback

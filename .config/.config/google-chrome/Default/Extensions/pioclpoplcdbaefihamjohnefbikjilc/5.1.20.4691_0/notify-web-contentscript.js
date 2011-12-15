@@ -1,0 +1,1 @@
+var clipperdiv=document.createElement("div");clipperdiv.setAttribute("id","__en_chrome_extension");clipperdiv.style.display="none";document.body.appendChild(clipperdiv);

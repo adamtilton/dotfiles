@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<session>
+  <history>
+    <bookmark name="atilton2" icon="user-home" uri="file:///home/atilton2"/>
+    <bookmark name="planning" icon="gnome-fs-directory" uri="file:///home/atilton2/Desktop/planning"/>
+    <bookmark name="literature" icon="gnome-fs-directory" uri="file:///home/atilton2/research/building_controls/literature"/>
+    <bookmark name="building_controls" icon="gnome-fs-directory" uri="file:///home/atilton2/research/building_controls"/>
+    <bookmark name="research" icon="gnome-fs-directory" uri="file:///home/atilton2/research"/>
+    <bookmark name="tmp" icon="gnome-fs-directory" uri="file:///tmp"/>
+    <bookmark name="disk" icon="gnome-fs-directory" uri="file:///media/disk"/>
+    <bookmark name="100610_1155" icon="gnome-fs-directory" uri="file:///media/100610_1155"/>
+    <bookmark name="/" icon="gnome-fs-directory" uri="file:///"/>
+    <bookmark name="Lab 6" icon="gnome-fs-directory" uri="file:///media/disk/Lab%20Solutions/Lab%20Solutions/Lab%206/Lab%206"/>
+    <bookmark name="Lab 6" icon="gnome-fs-directory" uri="file:///media/disk/Lab%20Solutions/Lab%20Solutions/Lab%206"/>
+    <bookmark name="Lab Solutions" icon="gnome-fs-directory" uri="file:///media/disk/Lab%20Solutions/Lab%20Solutions"/>
+    <bookmark name="Lab Solutions" icon="gnome-fs-directory" uri="file:///media/disk/Lab%20Solutions"/>
+    <bookmark name="Computer" icon="gnome-fs-client" uri="computer:///"/>
+    <bookmark name="Trash" icon="user-trash-full" uri="trash:"/>
+  </history>
+  <window type="navigation" geometry="1280x949+0+25" maximized="TRUE" location="file:///home/atilton2/Desktop/planning"/>
+</session>

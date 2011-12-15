@@ -1,0 +1,1356 @@
+{
+   "invalidNoteListOptionValue" : {
+      "description" : "Error indicating that the user selected invalid option for note list behavior",
+      "message" : "Pilihan tidak sah"
+   },
+   "EDAMError_4" : {
+      "description" : "Indicates internal error",
+      "message" : "Ralat dalaman"
+   },
+   "quickNoteAction_clipSelection" : {
+      "description" : "Label for clipping selection action",
+      "message" : "Klipkan pilihan"
+   },
+   "options_useLinkHilites" : {
+      "description" : "Label for the simultaneous search option to highlight links for notes already in the account.",
+      "message" : "Serlahkan hasil carian"
+   },
+   "options_useSearchHelperDescription" : {
+      "description" : "Description of the search-helper feature as shown on the options page",
+      "message" : "Apabila didayakan, carian anda pada enjin carian yang disokong juga akan dilakukan pada akaun Evernote anda. Lencana sambungan akan dikemas kini dengan kiraan nota yang sepadan. Enjin carian yang disokong ialah: Google, Bing, Yahoo, Yandex, dan Baidu."
+   },
+   "desktopNotification_viewFailedClip" : {
+      "description" : "Name of the action associated with viewing the URL of the clip that failed to upload. Should be as short as possible",
+      "message" : "Lihat"
+   },
+   "valueTooLong" : {
+      "description" : "Generic validation error message for fields with length above maximum",
+      "message" : "$fieldName$ tidak boleh lebih panjang daripada $num$ aksara.",
+      "placeholders" : {
+         "num" : {
+            "example" : "6",
+            "content" : "$2"
+         },
+         "fieldName" : {
+            "example" : "username",
+            "content" : "$1"
+         }
+      }
+   },
+   "filing" : {
+      "description" : "Message indicating that the extension is filing changes made to previously clipped note on the server",
+      "message" : "Memfailkan nota..."
+   },
+   "options_useSearchHelper" : {
+      "description" : "Label for search-helper feature toggle",
+      "message" : "Gunakan Carian Serentak"
+   },
+   "notes_titleForLocalFiles" : {
+      "description" : "Title for list of notes made from local files",
+      "message" : "Klip fail"
+   },
+   "options_secureProto" : {
+      "description" : "Label specifying secure protocol option.",
+      "message" : "Protokol selamat"
+   },
+   "options_useContextMenu" : {
+      "description" : "Label for option to enable clipping via contextual menu",
+      "message" : "Dayakan menu mengikut konteks"
+   },
+   "desktopNotification_unableToSaveClipUnknown" : {
+      "description" : "Headline for desktop notification indicating that there was an unknown error while uploading a clip",
+      "message" : "Tidak boleh menyimpan klip"
+   },
+   "options_clipStyle_none" : {
+      "description" : "Options for ignoring element styles of clipped content",
+      "message" : "Biasa, tanpa sebarang gaya"
+   },
+   "fileForm_viewInEvernote" : {
+      "description" : "Title of a link to a note in Evernote",
+      "message" : "Lihat dalam Evernote"
+   },
+   "noteSortOrder_createdAscending" : {
+      "description" : "Description of sort order used in listing notes where notes are sorted from oldest to newest by creation time",
+      "message" : "Dibuat (paling lama dahulu)"
+   },
+   "notes_titleWithDomainAndCount" : {
+      "description" : "Title for the note list with domain and note count",
+      "message" : "$domain$ ($count$)",
+      "placeholders" : {
+         "domain" : {
+            "example" : "www.example.com",
+            "content" : "$1"
+         },
+         "count" : {
+            "example" : "10",
+            "content" : "$2"
+         }
+      }
+   },
+   "desktopNotification_clipProcessorSignInMessage" : {
+      "description" : "Message shown to users inside desktop notification informing users that they clip could not be uploaded because they are not authenticated...",
+      "message" : "Pengesahan tidak sah atau telah tamat tempoh. Sila daftar masuk menggunakan butang bar alat, dan cuba lagi."
+   },
+   "loginForm_username" : {
+      "description" : "Label for entering username into login form",
+      "message" : "Nama pengguna"
+   },
+   "options_debugLevel" : {
+      "description" : "Label for debugging level option",
+      "message" : "Tahap penyahpepijatan"
+   },
+   "notes_title" : {
+      "description" : "Title for the note list",
+      "message" : "Nota"
+   },
+   "options_clipAction_fullPage" : {
+      "description" : "Label for full-page as the default clipping action",
+      "message" : "Klipkan halaman penuh"
+   },
+   "EDAMError_1" : {
+      "description" : "Used to describe an unknown EDAM error",
+      "message" : "Ralat tidak diketahui"
+   },
+   "loginForm_whatsThis" : {
+      "description" : "Description link",
+      "message" : "Lagi maklumat & enjin carian yang disokong"
+   },
+   "searchHelperUrlInEvernote" : {
+      "description" : "Message shown under a search result indicating that the linked page is already in the Evernote account",
+      "message" : "<span class='evernotePageInEvernote'><a target='_blank' href='$url$'>$notebookName$<\/a><\/span>",
+      "placeholders" : {
+         "notebookName" : {
+            "example" : "My notebook",
+            "content" : "$2"
+         },
+         "url" : {
+            "example" : "http:\/\/...",
+            "content" : "$1"
+         }
+      }
+   },
+   "totalPartsNotInRange" : {
+      "description" : "Indicates that total number of things listed is either below minimum or above maximum number allowed",
+      "message" : "Jumlah bilangan $fieldName$s haruslah antara $min$ dan $max$.",
+      "placeholders" : {
+         "min" : {
+            "example" : "1",
+            "content" : "$2"
+         },
+         "max" : {
+            "example" : "10",
+            "content" : "$3"
+         },
+         "fieldName" : {
+            "example" : "Tag",
+            "content" : "$1"
+         }
+      }
+   },
+   "debugLevel_4" : {
+      "description" : "Debug log level",
+      "message" : "Pengecualian"
+   },
+   "searchHelperNoTransportError" : {
+      "description" : "Error message shown to user when there is a problem reaching the servers when doing simultaneous search.",
+      "message" : "Carian serentak tidak tersedia buat masa ini kerana pelayan Evernote tidak boleh dicapai."
+   },
+   "loginForm_password" : {
+      "description" : "Label for entering password into login form",
+      "message" : "Kata laluan"
+   },
+   "quickNoteAction_clipUrl" : {
+      "description" : "Label for clipping URL action",
+      "message" : "Klipkan URL"
+   },
+   "options_clipNotebook_defaultNotebook" : {
+      "description" : "Option for using service-default notebook",
+      "message" : "Gunakan buku nota lalai"
+   },
+   "valueNotPresent" : {
+      "description" : "Generic validation error message for required form field",
+      "message" : "$fieldName$ perlu diisi dalam medan",
+      "placeholders" : {
+         "fieldName" : {
+            "example" : "username",
+            "content" : "$1"
+         }
+      }
+   },
+   "contextMenuClipUrl" : {
+      "description" : "Context menu item for creating a new note with just the URL of the current page",
+      "message" : "Klipkan URL"
+   },
+   "copyright" : {
+      "description" : "Copyright statement",
+      "message" : "&copy; 2011, Evernote Corporation."
+   },
+   "desktopNotification_clipProcessorSignInTitle" : {
+      "description" : "Title for desktop notification informing user that there was an error with uploading a clip. This should be as short as possible",
+      "message" : "Tidak boleh menyimpan \"$clipTitle$\"",
+      "placeholders" : {
+         "clipTitle" : {
+            "example" : "Sample clip title",
+            "content" : "$1"
+         }
+      }
+   },
+   "notesSearch_submit" : {
+      "description" : "Label for submitting note search",
+      "message" : "Cari nota"
+   },
+   "quickNoteAutoSavedDescription" : {
+      "description" : "description of auto saved quick note",
+      "message" : "(klik <i><b>Simpan<\/b><\/i> untuk menyerahkan nota ini kepada pelayan, atau <i><b>Buang<\/b><\/i> untuk melupuskannya)"
+   },
+   "options_clipNotebook_selected" : {
+      "description" : "Option for specifying which notebook to clip to by default",
+      "message" : "Gunakan yang berikut"
+   },
+   "options_useTabs" : {
+      "description" : "Label for option to use tabs rather than windows when opening new windows",
+      "message" : "Gunakan Tab"
+   },
+   "notes_titleWithCount" : {
+      "description" : "Title for the note list with note count",
+      "message" : "Menjumpai nota ($count$)",
+      "placeholders" : {
+         "count" : {
+            "example" : "10",
+            "content" : "$1"
+         }
+      }
+   },
+   "fullPageClipFailure" : {
+      "description" : "Message shown to user when full page clip wasn't possible",
+      "message" : "Maaf, Evernote tidak dapat mengklip seluruh halaman ini. Sila pilih bahagian yang anda ingin klipkan."
+   },
+   "quickNote_notebook" : {
+      "description" : "Label for selection of note's notebook",
+      "message" : "Buku nota"
+   },
+   "contentPreview_expandSelection" : {
+      "description" : "Selection nudging legend for expanding selection",
+      "message" : "kembangkan pilihan"
+   },
+   "options_storedCredentials" : {
+      "description" : "Label for a set of options controls enabling users to store their credentials",
+      "message" : "Bukti kelayakan"
+   },
+   "options_noteList" : {
+      "description" : "Label for choosing note list behavior option",
+      "message" : "Tunjukkan penyemak imbas nota"
+   },
+   "options_keepLogsDescription" : {
+      "description" : "Description of the keepLogs option",
+      "message" : "Bilangan hari untuk log lama harus disimpan. Log yang tidak diubah suai selama sekurang-kurangnya sebanyak hari yang ditetapkan itu akan dialih keluar. Nilai 0 bermakna tiada log yang akan disimpan."
+   },
+   "desktopNotification_clipProcessorUnexpectedErrorTitle" : {
+      "description" : "Title of the desktop notification indicating unexpected error",
+      "message" : "Ralat tidak dijangka"
+   },
+   "loginForm_register" : {
+      "description" : "Registration button label in login form",
+      "message" : "Daftar"
+   },
+   "quickNote_saveUrl" : {
+      "description" : "Label for allowing to save URL with a clip",
+      "message" : "Simpan URL halaman"
+   },
+   "notesView_searchNotesPlaceholder" : {
+      "description" : "Placeholder text for search query",
+      "message" : "Cari nota anda"
+   },
+   "invalidExpression" : {
+      "description" : "Indicates that form's input value contains invalid expression",
+      "message" : "Ungkapan tidak sah"
+   },
+   "EDAMResponseError_2" : {
+      "description" : "Indicates that the response from server was not recognizable",
+      "message" : "Sambutan tidak sah"
+   },
+   "contextMenuNewNote" : {
+      "description" : "Context menu item for creating new note",
+      "message" : "Nota baharu"
+   },
+   "noteSortOrder_updatedAscending" : {
+      "description" : "Description of sort order used in listing notes where notes are sorted from oldest to newest by updated time",
+      "message" : "Dikemas kini (paling lama dahulu)"
+   },
+   "findingNotes" : {
+      "description" : "Message indicating that the extension is currently searching notes based on user provided query",
+      "message" : "Mencari..."
+   },
+   "invalidMask" : {
+      "description" : "Indicates that user entered an expression that does not match given mask.",
+      "message" : "Ungkapan tidak sah dimasukkan."
+   },
+   "options_formReset" : {
+      "description" : "Message indicating to user that they reset options to defaults",
+      "message" : "Penetapan semula pilihan!"
+   },
+   "EDAMError_3_User_tooManyFailuresTryAgainLater" : {
+      "description" : "Indicates that a user tried to login way too many times with invalid credentials and needs to chill for a bit",
+      "message" : "Terlalu banyak kali gagal percubaan melog masuk. Sila cuba lagi nanti"
+   },
+   "debugLevel_3" : {
+      "description" : "Debug log level",
+      "message" : "Ralat"
+   },
+   "quickNote_addComment" : {
+      "description" : "Placeholder text for comment input",
+      "message" : "Klik untuk menambah ulasan"
+   },
+   "EDAMError_12" : {
+      "description" : "Indicates that given shard is unavailable",
+      "message" : "Shard tidak tersedia"
+   },
+   "authExpiredError" : {
+      "description" : "Error indicating that authentication token expired and user needs to relogin again.",
+      "message" : "Pengesahan tamat tempoh"
+   },
+   "fileForm_sourceURL" : {
+      "description" : "Label for source URL",
+      "message" : "Sumber:"
+   },
+   "options_clipNotebook" : {
+      "description" : "Option for selecting default destination notebook for the clips",
+      "message" : "Mengklip buku nota destinasi"
+   },
+   "multipleErrorsTitle" : {
+      "description" : "Title for displaying a list of errors",
+      "message" : "Ralat berikut telah berlaku:"
+   },
+   "contextMenuClipSelection" : {
+      "description" : "Context menu item for clipping current selection",
+      "message" : "Klipkan pilihan"
+   },
+   "EDAMError_3" : {
+      "description" : "Indicates that permission was denied for request by the server",
+      "message" : "Keizinan ditolak"
+   },
+   "BrowserActionTitle" : {
+      "description" : "Title for the browser action that's visible to the user of extension",
+      "message" : "Klipkan pada Evernote"
+   },
+   "EDAMError_9" : {
+      "description" : "Indicates that current session was expired",
+      "message" : "Pengesahan tamat tempoh"
+   },
+   "options_clipAction_url" : {
+      "description" : "Label for url as the default clipping action",
+      "message" : "Klipkan URL"
+   },
+   "EDAMError_2_url" : {
+      "description" : "Indicates that user tried to submit invalid or unsupported URL",
+      "message" : "URL tidak sah atau tidak disokong"
+   },
+   "BrowserActionTitleUnsaved" : {
+      "description" : "Title for the browser action that's visible to the user of extension when there are unsaved changes",
+      "message" : "Klipkan pada Evernote (Perubahan Tidak Disimpan)"
+   },
+   "options_noteList_always" : {
+      "description" : "Option to always show note browser",
+      "message" : "Sentiasa"
+   },
+   "options_noteSortOrder" : {
+      "description" : "Label for selecting note sort order",
+      "message" : "Isih nota mengikut"
+   },
+   "desktopNotification_unableToSaveClip" : {
+      "description" : "Headline for desktop notifications indicating there was a problem with saving the clip",
+      "message" : "Tidak boleh menyimpan \"$clipTitle$\"",
+      "placeholders" : {
+         "clipTitle" : {
+            "example" : "Sample clip title",
+            "content" : "$1"
+         }
+      }
+   },
+   "signout" : {
+      "description" : "Text on a link prompting for signing out currently logged in user",
+      "message" : "Daftar keluar"
+   },
+   "invalidServiceProto" : {
+      "description" : "Indicates that the supplied service protocol is invalid",
+      "message" : "Protokol perkhidmatan tidak sah. Hendaklah sama ada http:\/\/ atau https:\/\/"
+   },
+   "loginForm_login" : {
+      "description" : "Sign in button label for login form",
+      "message" : "Daftar masuk"
+   },
+   "syncError" : {
+      "description" : "Error message shown to user when the extension fails to synchronize",
+      "message" : "Maaf, tidak dapat menyegerakkan ($details$)",
+      "placeholders" : {
+         "details" : {
+            "example" : "illegal access",
+            "content" : "$1"
+         }
+      }
+   },
+   "valueTooShort" : {
+      "description" : "Generic validation error message for fields with length below minimum",
+      "message" : "$fieldName$ hendaklah sekurang-kurangnya $num$ aksara panjangnya.",
+      "placeholders" : {
+         "num" : {
+            "example" : "6",
+            "content" : "$2"
+         },
+         "fieldName" : {
+            "example" : "username",
+            "content" : "$1"
+         }
+      }
+   },
+   "notesSearch_search" : {
+      "description" : "Label for note search input",
+      "message" : "Cari"
+   },
+   "quickNote_mailTo" : {
+      "description" : "Label for specifying email addresses to share the clip with",
+      "message" : "E-melkan klip ini"
+   },
+   "options_clipNotebook_remember" : {
+      "description" : "Option for remembering previously used notebook",
+      "message" : "Ingat"
+   },
+   "options_storedCredentialsShortDescription" : {
+      "description" : "First sentence of the message in options_storedCredentialsDescription",
+      "message" : "<b>NOTA:<\/b> Menyimpan kata laluan turut membolehkan orang lain mencapai akaun Evernote anda apabila menggunakan penyemak imbas ini."
+   },
+   "quickNote_tagNames" : {
+      "description" : "Label for note's tags",
+      "message" : "Teg"
+   },
+   "fullPageClipTooBig" : {
+      "description" : "Message shown to user when the full page clip is too big to POST to the server",
+      "message" : "Maaf, seluruh halaman terlalu besar untuk diklip oleh Evernote. <br\/>Sila pilih bahagian yang anda ingin klipkan."
+   },
+   "searchHelperFoundNotes" : {
+      "description" : "Message injected into search-engine page indicating how many notes were also found in Evernote",
+      "message" : "<span class='evernoteResultStatsLargeText'><a href='$searchUrl$'target='_blank'><span class='evernoteResultStatsCount'>$count$nota<\/span> yang terdapat dalam akaun Evernote anda<\/a><\/span>",
+      "placeholders" : {
+         "searchUrl" : {
+            "example" : "http:\/\/www.evernote.com\/Home.action?#v=t&b=0&x=search+words",
+            "content" : "$2"
+         },
+         "count" : {
+            "example" : "168",
+            "content" : "$1"
+         }
+      }
+   },
+   "EDAMError_11" : {
+      "description" : "Indicates invalid ENML",
+      "message" : "Ralat pengesahan ENML ($parameter$)",
+      "placeholders" : {
+         "parameter" : {
+            "example" : "url",
+            "content" : "$1"
+         }
+      }
+   },
+   "logs_follow" : {
+      "description" : "Label for an option to trail the logfile",
+      "message" : "Ikut"
+   },
+   "tagNamesNotInRange" : {
+      "description" : "Indicates that user entered an abnormal number of tags",
+      "message" : "Sila masukkan antara $min$ hingga $max$ teg.",
+      "placeholders" : {
+         "min" : {
+            "example" : "1",
+            "content" : "$1"
+         },
+         "max" : {
+            "example" : "10",
+            "content" : "$2"
+         }
+      }
+   },
+   "contentPreview_clipArticle" : {
+      "description" : "Selection nudging legend for clipping article",
+      "message" : "klipkan artikel"
+   },
+   "articleClipFailure" : {
+      "description" : "Messages shown to user when the article of the page isn't clippable.",
+      "message" : "Maaf, Evernote tidak dapat mengklip halaman ini sebagai artikel. Sila pilih bahagian yang anda ingin klipkan."
+   },
+   "contentClipped" : {
+      "description" : "Title indicating that content was successfully clipped",
+      "message" : "Kandungan berjaya diklipkan"
+   },
+   "options_fullPage_always" : {
+      "description" : "Option for always clipping full page",
+      "message" : "Sentiasa"
+   },
+   "options_submit" : {
+      "description" : "Label for saving options",
+      "message" : "Simpan"
+   },
+   "invalidFullPageOptionValue" : {
+      "description" : "Error indicating that the user selected invalid option for full page behavior",
+      "message" : "Pilihan tidak sah"
+   },
+   "fileForm_done" : {
+      "description" : "Label for filing previously clipped note and\/or dismissing the filing dialog",
+      "message" : "Selesai"
+   },
+   "notesList_loading" : {
+      "description" : "Message shown when searching for notes",
+      "message" : "Mencari nota..."
+   },
+   "options_simulateCheckVersionFailure" : {
+      "description" : "Label for developer option to simulate checkVersion failure",
+      "message" : "Simulate checkVersion Failure"
+   },
+   "options_clipAction_article" : {
+      "description" : "Label for article as the default clipping action",
+      "message" : "Klipkan artikel"
+   },
+   "quickNote_cancel" : {
+      "description" : "Label for dismissing quick note composition dialog",
+      "message" : "Batal"
+   },
+   "Error_HTTP_Transport" : {
+      "description" : "Generic error indicating that the extension could not get a response from a server",
+      "message" : "Masalah berhubung dengan pelayan [$status$]. $errorText$",
+      "placeholders" : {
+         "errorText" : {
+            "example" : "http error response",
+            "content" : "$2"
+         },
+         "status" : {
+            "example" : "404",
+            "content" : "HTTP $1"
+         }
+      }
+   },
+   "desktopNotification_clipProcessorUnexpectedErrorMessage" : {
+      "description" : "Error message indicating that an unexpected error occurred during an attempt to upload a single clip.",
+      "message" : "Tidak dapat memuat naik klip kerana ralat yang tidak dijangka:<br\/><span class='error'>$error$<\/span>",
+      "placeholders" : {
+         "error" : {
+            "example" : "Unexpected end of file",
+            "content" : "$1"
+         }
+      }
+   },
+   "requiredUsernameOptionValue" : {
+      "description" : "Error indicating that the user must enter a username if they choose to specify a password",
+      "message" : "Nama pengguna diperlukan jika anda menyatakan kata laluan"
+   },
+   "logs_refreshRate" : {
+      "description" : "Label for refresh rate selector",
+      "message" : "Kadar Muat Semula: "
+   },
+   "options_autoSaveClipNote_always" : {
+      "description" : "Option for preserving changes to the note between invocations of the extension",
+      "message" : "Ingat perubahan"
+   },
+   "options_storedCredentialsUsername" : {
+      "description" : "Label for username input",
+      "message" : "Nama pengguna"
+   },
+   "options_selectionNudging" : {
+      "description" : "Label for selection nudging options",
+      "message" : "Pemilihan artikel"
+   },
+   "desktopNotification_cancelFailedClip" : {
+      "description" : "Name of the action associated with cancelling the clip that failed to upload. Should be as short as possible",
+      "message" : "Batal"
+   },
+   "loginForm_passwordError_5" : {
+      "description" : "",
+      "message" : "Kata laluan diperlukan."
+   },
+   "searchHelperDomainInEvernote" : {
+      "description" : "Message shown under a search result indicating that there are several notes from that domain already in the Evernote account",
+      "message" : "<span class='evernoteDomainPagesInEvernote'><a target='_blank' href='$url$'>semua nota dari $domain$<\/a><\/span>",
+      "placeholders" : {
+         "domain" : {
+            "example" : "example.com",
+            "content" : "$2"
+         },
+         "url" : {
+            "example" : "http:\/\/...",
+            "content" : "$1"
+         }
+      }
+   },
+   "contextMenuClipImage" : {
+      "description" : "Context menu item for creating a new note with image",
+      "message" : "Klipkan imej"
+   },
+   "noteSortOrder_updatedDescending" : {
+      "description" : "Description of sort order used in listing notes where notes are sorted from newest to oldest by updated time",
+      "message" : "Dikemas kini (paling baharu dahulu)"
+   },
+   "header_register" : {
+      "description" : "Registration link in header",
+      "message" : "Buat akaun"
+   },
+   "options_clipAction" : {
+      "description" : "Label for specifying default clipping action",
+      "message" : "Tindakan lalai"
+   },
+   "contentPreview_shrinkSelection" : {
+      "description" : "Selection nudging legend for shrinking selection",
+      "message" : "kecilkan pilihan"
+   },
+   "EDAMResponseError_1" : {
+      "description" : "Indicates an unknown error associated with response from the request made to the server",
+      "message" : "Ralat sambutan tidak diketahui"
+   },
+   "mailTosNotInRange" : {
+      "description" : "Indicates that there were to many email addresses given",
+      "message" : "Paling banyak $max$ alamat dibenarkan.",
+      "placeholders" : {
+         "min" : {
+            "example" : "0",
+            "content" : "$1"
+         },
+         "max" : {
+            "example" : "10",
+            "content" : "$2"
+         }
+      }
+   },
+   "EDAMError_5_username" : {
+      "description" : "Indicates that username field needs to be filled in",
+      "message" : "Nama pengguna perlu diisi dalam medan"
+   },
+   "ExtensionName" : {
+      "description" : "Name of the extension as it's visible to the outside world",
+      "message" : "Evernote Web Clipper"
+   },
+   "loggingIn" : {
+      "description" : "Message indicating that the extension is currently attempting to sign in user",
+      "message" : "Mendaftar masuk ke Evernote"
+   },
+   "log_noLogsFound" : {
+      "description" : "Title of the log selection when there are no log files found",
+      "message" : "Log tidak dijumpai"
+   },
+   "logs_export" : {
+      "description" : "Title of the button for exporting all of the logs",
+      "message" : "Eksport"
+   },
+   "contextMenuPleaseLogin" : {
+      "description" : "Help message shown to users when they try to clip content via contextual menu items but not being intially logged in",
+      "message" : "Anda hendaklah mendaftar masuk menggunakan butang bar alat Klipkan Pada Evernote sebelum anda boleh membuat klip"
+   },
+   "noteList_modifySearch" : {
+      "description" : "Message instructing user to modify their note search criteria",
+      "message" : "Cuba mengubah suai carian anda"
+   },
+   "quickNote_mailToDescription" : {
+      "description" : "Description for the mailTo field (email this clip)",
+      "message" : "Masukkan sehingga $max$ alamat e-mel, dipisahkan dengan koma",
+      "placeholders" : {
+         "max" : {
+            "example" : "10",
+            "content" : "$1"
+         }
+      }
+   },
+   "EDAMError_5_password" : {
+      "description" : "Indicates that password field needs to be filled in",
+      "message" : "Kata laluan perlu diisi dalam medan"
+   },
+   "options_insecureProto" : {
+      "description" : "Label for specifying insecure protocol option.",
+      "message" : "Protokol tidak selamat"
+   },
+   "logs_confirmDeleteFiles" : {
+      "description" : "Confirmation message asking user whether or not they actuall want to remove log files",
+      "message" : "Ini akan memadamkan $count$ fail log. Adakah anda pasti mahu meneruskan?",
+      "placeholders" : {
+         "count" : {
+            "example" : "10",
+            "content" : "$1"
+         }
+      }
+   },
+   "EDAMError_10" : {
+      "description" : "Indicates that there was a conflict in data",
+      "message" : "Percanggahan data ($parameter$)",
+      "placeholders" : {
+         "parameter" : {
+            "example" : "url",
+            "content" : "$1"
+         }
+      }
+   },
+   "options_selectionNudging_disabled" : {
+      "description" : "Label for disabled selection nudging",
+      "message" : "Dilumpuhkan"
+   },
+   "contentPreview_moveSelection" : {
+      "description" : "Selection nudging legend for moving selection",
+      "message" : "pindahkan pilihan"
+   },
+   "options_selectionNudging_enabled" : {
+      "description" : "Label for enabled selection nudging",
+      "message" : "Didayakan"
+   },
+   "options_useContextMenuDescription" : {
+      "description" : "Description of the contextual menu option",
+      "message" : "Apabila didayakan, anda boleh klipkan halaman sesawang melalui menu mengikut konteks. Mengklik kanan pada imej, teks pilihan atau pada mana-mana bahagian halaman akan turut mendedahkan pilihan pengklipan yang sesuai."
+   },
+   "EDAMError_6" : {
+      "description" : "Indicates that some kind of limit was reached",
+      "message" : "Had dicapai"
+   },
+   "loginForm_usernameError_8" : {
+      "description" : "",
+      "message" : "Nama pengguna dan kata laluan tidak sepadan dengan pengguna sedia ada."
+   },
+   "clippingToEvernote" : {
+      "description" : "Message indicating that the extensions is currently sending clip to Evernote",
+      "message" : "Menghantar klik ke Evernote..."
+   },
+   "options_reset" : {
+      "description" : "Label for resetting options",
+      "message" : "Tetapkan semula"
+   },
+   "loginForm_rememberMe" : {
+      "description" : "Label for extending login session",
+      "message" : "Ingat saya"
+   },
+   "debugLevel_1" : {
+      "description" : "Debug log level",
+      "message" : "Maklumat"
+   },
+   "illegalUrlClipFailure" : {
+      "description" : "Error message shown when you try to clip from pages that aren't scriptable by the browser. Such as the chrome gallery pages.",
+      "message" : "Disebabkan oleh sekatan yang ditetapkan oleh penyemak imbas, anda tidak boleh mengklip halaman ini"
+   },
+   "EDAMError_8_username" : {
+      "description" : "Indicates that user tried to sign in with incorrect username\/password",
+      "message" : "Bukan pengguna aktif yang sah"
+   },
+   "contextMenuClipPage" : {
+      "description" : "Context menu item for clipping current page",
+      "message" : "Klipkan halaman ini"
+   },
+   "fileForm_notebook" : {
+      "description" : "Label for selection of note's notebook",
+      "message" : "Buku nota"
+   },
+   "invalidMailTo" : {
+      "description" : "Indicates that at least one email address is not in a valid format",
+      "message" : "Terdapat sekurang-kurangnya satu alamat e-mel tidak sah"
+   },
+   "options_clipNotificationEnabled" : {
+      "description" : "Label for option to enable notification about successful clips",
+      "message" : "Dayakan pemberitahuan"
+   },
+   "ExtensionDescription" : {
+      "description" : "Description of the extension as it's visible to the outside world",
+      "message" : "Gunakan sambungan Evernote untuk menyimpan bahan yang anda lihat pada laman sesawang ke dalam akaun Evernote anda. Malah, ia membolehkan anda mencari dalam seluruh nota anda."
+   },
+   "unclippablePage" : {
+      "description" : "Message inticating that the extension cannot obtain contents of a page",
+      "message" : "Halaman yang anda cuba klipkan dibina secara yang tidak membolehkan Evernote mengklipnya!"
+   },
+   "EDAMError_2_mailTo" : {
+      "description" : "Indicates that user submitted at least one invalid email address",
+      "message" : "Sekurang-kurangnya satu alamat e-mel tidak sah"
+   },
+   "dismiss" : {
+      "description" : "Message shown on buttons to dismiss a widget of some kind",
+      "message" : "Buang"
+   },
+   "quickNoteAction_clipArticle" : {
+      "description" : "Label for clipping article action",
+      "message" : "Klipkan artikel"
+   },
+   "quickNote" : {
+      "description" : "Title for creating quick note",
+      "message" : "Klip"
+   },
+   "mailToNotInRange" : {
+      "description" : "Indicates that at least one email addresses in of invalid length",
+      "message" : "Setiap alamat e-mel haruslah antara $min$ dan $max$ aksara panjangnya",
+      "placeholders" : {
+         "min" : {
+            "example" : "6",
+            "content" : "$1"
+         },
+         "max" : {
+            "example" : "255",
+            "content" : "$2"
+         }
+      }
+   },
+   "options_noteList_never" : {
+      "description" : "Option to never show note browser",
+      "message" : "Jangan sekali-kali"
+   },
+   "notes_titleLocalFilesAndCount" : {
+      "description" : "Tab title for the list of notes made from local files and note count",
+      "message" : "Klip fail ($count$)",
+      "placeholders" : {
+         "count" : {
+            "example" : "10",
+            "content" : "$1"
+         }
+      }
+   },
+   "noteSortOrder_createdDescending" : {
+      "description" : "Description of sort order used in listing notes where notes are sorted from newest to oldset by creation time",
+      "message" : "Dibuat (paling baharu dahulu)"
+   },
+   "autoSaving" : {
+      "description" : "Message indicating the the extension is currently auto-saving changes user made to the note",
+      "message" : "Menyimpan..."
+   },
+   "fileForm_tagNames" : {
+      "description" : "Label for note's tags",
+      "message" : "Teg"
+   },
+   "desktopNotification_retryFailedClip" : {
+      "description" : "Name of the action associated with retrying the clip that failed to upload. Should be as short as possible",
+      "message" : "Cuba semula"
+   },
+   "deleteSuccess" : {
+      "description" : "Message indication that previously clipped note was successfully deleted",
+      "message" : "Berjaya memadamkan nota..."
+   },
+   "loginForm_passwordError_2" : {
+      "description" : "",
+      "message" : "Kata laluan mengandungi aksara tidak betul. Sila betulkan dahulu."
+   },
+   "options_noteList_remember" : {
+      "description" : "Option to remember whether note list was open between invocations of the extension",
+      "message" : "Ingat"
+   },
+   "invalidAutoSaveClipNoteOptionValue" : {
+      "description" : "Error indicating that the user selected invalid option for the auto-save behavior",
+      "message" : "Pilihan tidak sah"
+   },
+   "options_failedToSave" : {
+      "description" : "Error message shown when options couldn't be saved",
+      "message" : "Tidak dapat menyimpan pilihan!"
+   },
+   "tagNameNotInRange" : {
+      "description" : "Indicates that user entered a tag that's not valid in length",
+      "message" : "Setiap teg haruslah antara $min$ dan $max$ aksara panjangnya.",
+      "placeholders" : {
+         "min" : {
+            "example" : "1",
+            "content" : "$1"
+         },
+         "max" : {
+            "example" : "10",
+            "content" : "$2"
+         }
+      }
+   },
+   "options_title" : {
+      "description" : "Title of the options page",
+      "message" : "Pilihan"
+   },
+   "quickNote_title" : {
+      "description" : "Label for note title",
+      "message" : "Tajuk"
+   },
+   "debugLevel_5" : {
+      "description" : "Debug log level",
+      "message" : "Matikan"
+   },
+   "introPageUrl" : {
+      "description" : "URL to the intro page for the extension",
+      "message" : "http:\/\/www.evernote.com\/about\/download\/#Chrome"
+   },
+   "options_enableDebugging" : {
+      "description" : "Label for enabling\/disabling debugging",
+      "message" : "Dayakan penyahpepijatan"
+   },
+   "loginForm_usernameError_2" : {
+      "description" : "",
+      "message" : "Nama pengguna mengandungi aksara tidak betul. Sila betulkan dahulu."
+   },
+   "logs_selectLogFile" : {
+      "description" : "Label for selecting log files for viewing",
+      "message" : "Pilih fail log: "
+   },
+   "EDAMError_8_password" : {
+      "description" : "Indicates that user tried to sign in with incorrect username\/password",
+      "message" : "Nama pengguna dan kata laluan tidak sepadan dengan pengguna sedia ada"
+   },
+   "quickNote_discard" : {
+      "description" : "Label for dismissing auto-saved quick note",
+      "message" : "Buang"
+   },
+   "notesView_myNotes" : {
+      "description" : "Title of the tab revealing user's list of notes",
+      "message" : "Semua nota"
+   },
+   "quickNote_comment" : {
+      "description" : "Label for additional text to be added to the note",
+      "message" : "Tambah teks"
+   },
+   "loggingOut" : {
+      "description" : "Message indicating that the extension is currently attempting to sign out user",
+      "message" : "Mendaftar keluar"
+   },
+   "debugLevel_2" : {
+      "description" : "Debug log level",
+      "message" : "Amaran"
+   },
+   "desktopNotification_clipUploaded" : {
+      "description" : "Headline for desktop notification indicating that clip was successfully uploaded",
+      "message" : "Telah klipkan \"$clipTitle$\"",
+      "placeholders" : {
+         "clipTitle" : {
+            "example" : "Sample clip title",
+            "content" : "$1"
+         }
+      }
+   },
+   "loginForm_searchHelper" : {
+      "description" : "Label for search helper option on the login view",
+      "message" : "Cari dalam Evernote apabila anda membuat carian di Google, Bing, Yahoo dan enjin carian yang lain"
+   },
+   "searchHelperNotesNotFound" : {
+      "description" : "Message injected into search-engine page indicating there were no matching notes found in Evernote",
+      "message" : "<span class='evernoteResultStatsLargeText'>Tiada nota yang sepadan dijumpai dalam akaun Evernote anda<\/span>"
+   },
+   "EDAMError_7" : {
+      "description" : "Indicates that user has exceeded their quota",
+      "message" : "Melebihi kuota. Pertimbangkan untuk <a target='_blank' href='http:\/\/www.evernote.com\/about\/premium\/'>menaik taraf akaun anda kepada Premium<\/a>."
+   },
+   "notification_quotaExceeded" : {
+      "description" : "Indicates that user has exceeded their quota",
+      "message" : "Melebihi kuota. Pertimbangkan untuk <a href='http:\/\/www.evernote.com\/about\/premium\/' onclick='$onClick$'>menaik taraf akaun anda kepada Premium<\/a>.",
+      "placeholders" : {
+         "onClick" : {
+            "example" : "openUrl(this.href);window.close();",
+            "content" : "$1"
+         }
+      }
+   },
+   "desktopNotification_clipProcessorUnexpectedErrorMessageWithCount" : {
+      "description" : "Error message indicating that an unexpected error occurred during an attempt to upload multiple clips",
+      "message" : "Tidak dapat memuat naik $count$ klip kerana ralat yang tidak dijangka:<br\/><span class='error'>$error$<\/span>",
+      "placeholders" : {
+         "count" : {
+            "example" : "3",
+            "content" : "$2"
+         },
+         "error" : {
+            "example" : "Unexpected end of file",
+            "content" : "$1"
+         }
+      }
+   },
+   "options_formSaved" : {
+      "description" : "Message indicating to user that they successfully updated options",
+      "message" : "Pilihan disimpan."
+   },
+   "desktopNotification_unableToSaveClipUnknownMessage" : {
+      "description" : "Description of the unknown error that may occur after the extension failed to upload a clip and now it's lost...",
+      "message" : "Ralat tidak diketahui telah berlaku semasa cuba menyimpan satu daripada klip anda."
+   },
+   "notesViewTitle" : {
+      "description" : "Title for Notes browser",
+      "message" : "Nota"
+   },
+   "invalidPassword" : {
+      "description" : "Specific validation error message indicating that entered password contains invalid characters",
+      "message" : "Kata laluan hendaklah antara 6 hingga 64 aksara panjangnya, dan mengandungi huruf, nombor dan tanda baca."
+   },
+   "options_clipStyle_full" : {
+      "description" : "Option for preserving all of the element styles of clipped content",
+      "message" : "Kekalkan semua gaya"
+   },
+   "desktopNotification_clipUploadedMessage" : {
+      "description" : "Message indicating that clip was successfully uploaded",
+      "message" : "Klip berjaya dimuat naik."
+   },
+   "EDAMError_1_notebookGuid" : {
+      "description" : "Error message indicating unknown notebook",
+      "message" : "Buku nota tidak diketahui"
+   },
+   "options_clipStyle" : {
+      "description" : "Label for various options regarding preservation of element styles of clipped content",
+      "message" : "Gaya klip"
+   },
+   "desktopNotification_editSuccessClip" : {
+      "description" : "Name of the action associated with editing clipped note",
+      "message" : "Sunting"
+   },
+   "loginToEvernote" : {
+      "description" : "Title prompting user to login",
+      "message" : "Daftar masuk ke Evernote"
+   },
+   "searchHelperSearching" : {
+      "description" : "Message injected into search-engine page indicating that a searching is currently in process",
+      "message" : "<span class='evernoteResultStatsLargeText'>Mencari dalam akaun Evernote anda...<\/span>"
+   },
+   "logs_dontRefresh" : {
+      "description" : "Option for not refreshing logs",
+      "message" : "Jangan Muat Semula"
+   },
+   "contentclipper_clipping" : {
+      "description" : "Message shown on content pages to notify users that the page is being scraped for clipping... Should be as brief as possible",
+      "message" : "Mengklip..."
+   },
+   "quickNote_fullPage" : {
+      "description" : "Label for allowing to clip contents of the entire page",
+      "message" : "Klipkan halaman penuh"
+   },
+   "notes_titleForDomain" : {
+      "description" : "Title for list of notes taken from current domain",
+      "message" : "Nota diklipkan daripada <b>$domain$<\/b>",
+      "placeholders" : {
+         "domain" : {
+            "example" : "www.example.com",
+            "content" : "$1"
+         }
+      }
+   },
+   "fileForm_title" : {
+      "description" : "Label for note title",
+      "message" : "Tajuk"
+   },
+   "options_fullPage_never" : {
+      "description" : "Options for never clipping full page",
+      "message" : "Jangan sekali-kali"
+   },
+   "loading" : {
+      "description" : "Message shown when extension is loading...",
+      "message" : "Memuatkan..."
+   },
+   "invalidUsername" : {
+      "description" : "Specific validation error message indicating that entered username is not valid",
+      "message" : "Nama pengguna anda hendaklah bermula dan berakhir dengan huruf atau nombor, ia boleh mengandungi sengkang dan garis bawah."
+   },
+   "options_cancel" : {
+      "description" : "Label for cancelling options",
+      "message" : "Batal"
+   },
+   "loginForm_usernameError_5" : {
+      "description" : "",
+      "message" : "Nama pengguna diperlukan."
+   },
+   "fileForm_delete" : {
+      "description" : "Label for deleting previously clipped note",
+      "message" : "Padam"
+   },
+   "authPersistenceError" : {
+      "description" : "Error indicating that the browser fails to persist authentication.",
+      "message" : "Pilihan penyemak imbas anda bercanggah dengan sambungan Evernote. Cuba pulihkan tetapan Kandungan Privasi Chrome kepada lalai: Benarkan data setempat ditetapkan dan JANGAN sekat kuki pihak ketiga. Pertimbangkan untuk melumpuhkan sambungan pihak ketiga yang lain."
+   },
+   "autoSavedNote" : {
+      "description" : "Title for editing auto-saved note",
+      "message" : "Nota tidak disimpan"
+   },
+   "searchHelperConfirmDisable" : {
+      "description" : "Message shown to user asking confirmation to disable Simultaneous Search feature",
+      "message" : "Adakah anda pasti mahu melumpuhkan ciri Carian Serentak Evernote? (Anda boleh mendayakannya semula pada bila-bila masa dalam halaman Pilihan sambungan)"
+   },
+   "EDAMError_900" : {
+      "description" : "Indicates that the extension didn't pass version check",
+      "message" : "This version of Evernote Web Clipper is no longer compatible with Evernote Service. Please install the latest version."
+   },
+   "quickNoteAction_clipFullPage" : {
+      "description" : "Label for clipping full page action",
+      "message" : "Klipkan halaman penuh"
+   },
+   "EDAMError_5" : {
+      "description" : "Indicates that some data was required in the request by the server, but wasn't found",
+      "message" : "Data diperlukan ($parameter$)",
+      "placeholders" : {
+         "parameter" : {
+            "example" : "url",
+            "content" : "$1"
+         }
+      }
+   },
+   "BrowserActionTitlePending" : {
+      "description" : "Title for the browser action that's visible to the user of extension when there are clips being uploaded in the background",
+      "message" : "Memuat naik klip yang tidak disimpan"
+   },
+   "options_serviceDomain" : {
+      "description" : "Label specifying service domain option.",
+      "message" : "Domain perkhidmatan"
+   },
+   "browserPersistenceError" : {
+      "description" : "Warning message shown to user when the browser is having problems persisting data on disk",
+      "message" : "Penyemak imbas mengalami masalah tetap dengan data anda pada cakera ($error$).\nSambungan \"Klipkan pada Evernote\" akan terus berfungsi, tetapi klip anda yang tidak disimpan tidak akan dikekalkan selepas anda memulakan semula penyemak imbas anda.\nSekiranya penyemak imbas anda tidak terkini, pertimbangkan untuk menaikkan tarafnya.",
+      "placeholders" : {
+         "error" : {
+            "example" : "FileError: 2 (SECURITY_ERR)",
+            "content" : "$1"
+         }
+      }
+   },
+   "options_clipNotificationEnabledDescription" : {
+      "description" : "Description of the notifications option",
+      "message" : "Apabila didayakan, anda akan diberitahu apabila sesuatu klip telah dimuat naik. Pemberitahuan memudahkan anda untuk melihat, menyunting dan mengongsi klip anda."
+   },
+   "EDAMError_2" : {
+      "description" : "Data was transmitted in invalid format",
+      "message" : "Format data tidak betul ($parameter$)",
+      "placeholders" : {
+         "parameter" : {
+            "example" : "url",
+            "content" : "$1"
+         }
+      }
+   },
+   "valueNotInRange" : {
+      "description" : "Generic validation error message for values whose lenghts are outside of given range",
+      "message" : "$fieldName$ haruslah antara $min$ dan $max$ aksara panjangnya",
+      "placeholders" : {
+         "min" : {
+            "example" : "1",
+            "content" : "$2"
+         },
+         "max" : {
+            "example" : "64",
+            "content" : "$3"
+         },
+         "fieldName" : {
+            "example" : "username",
+            "content" : "$1"
+         }
+      }
+   },
+   "UnknownError" : {
+      "description" : "Used to describe an unknown error of any kind",
+      "message" : "Ralat tidak diketahui"
+   },
+   "options_developer_title" : {
+      "description" : "Title for developer options",
+      "message" : "Pilihan Pembangun"
+   },
+   "debugLevel_0" : {
+      "description" : "Debug log level",
+      "message" : "Nyahpepijat"
+   },
+   "quickNote_submit" : {
+      "description" : "Label for saving quick note",
+      "message" : "Simpan"
+   },
+   "notes_titleAllWithCount" : {
+      "description" : "Title for the note list with note count",
+      "message" : "Nota saya ($count$)",
+      "placeholders" : {
+         "count" : {
+            "example" : "10",
+            "content" : "$1"
+         }
+      }
+   },
+   "synchronizing" : {
+      "description" : "Message shown when the extension is synchronizing",
+      "message" : "Menyegerakkan..."
+   },
+   "options_keepLogs" : {
+      "description" : "Label for specifying number of days to keep log files for",
+      "message" : "Hari untuk mengekalkan log"
+   },
+   "more" : {
+      "description" : "General purpose, capitalized word for More - as in - there's more to see\/read etc.",
+      "message" : "Lagi"
+   },
+   "options_selectionNudging_enabledNoprompt" : {
+      "description" : "Label for enabled selection nudging, but without showing the hits",
+      "message" : "Didayakan (tiada petua)"
+   },
+   "quickNoteDescription" : {
+      "description" : "description of quick note",
+      "message" : "(untuk mengklip kandungan halaman ini, tandakan kotak pilihan <i><b>Klipkan halaman penuh<\/b><\/i>)"
+   },
+   "valueDoesNotMatch" : {
+      "description" : "Generic validation error message for fields with value not matching expected pattern",
+      "message" : "$fieldName$ tidak sah.",
+      "placeholders" : {
+         "fieldName" : {
+            "example" : "username",
+            "content" : "$1"
+         }
+      }
+   },
+   "contentScriptTimedOut" : {
+      "description" : "Message shown to user when the page is unresponsive and the extension cannot gather any content from the webpage.",
+      "message" : "Maaf, Evernote cuba mengklip halaman ini, tetapi halaman tersebut tidak memberikan sambutan. Anda masih boleh ingat halaman ini dengan URL-nya tetapi tanpa kandungan."
+   },
+   "options_storedCredentialsPassword" : {
+      "description" : "Label for password field",
+      "message" : "Kata laluan"
+   },
+   "searchHelperLoginMessage" : {
+      "description" : "Message injected into search-engine page indicating that the user must login prior to seeing results.",
+      "message" : "<a target='_blank' href='$loginUrl$'>Daftar masuk<\/a> untuk membuat carian dalam Evernote secara serentak, atau <a target='_blank' en-bind-click='disableSearchHelper' href='$disableUrl$'>lumpuhkan<\/a> ciri ini.",
+      "placeholders" : {
+         "loginUrl" : {
+            "example" : "http:\/\/www.evernote.com\/Login.action",
+            "content" : "$1"
+         },
+         "disableUrl" : {
+            "example" : "chrome-extension:\/\/extensionId\/options.html",
+            "content" : "$2"
+         }
+      }
+   },
+   "log_noLogSelected" : {
+      "description" : "Alert message for when user tries to delete a log file but hasn't selected one",
+      "message" : "Fail log tidak dipilih"
+   },
+   "options_autoSaveClipNote" : {
+      "description" : "Label for auto-saving options",
+      "message" : "Penyimpanan auto Quicknote"
+   },
+   "FormParsingError" : {
+      "description" : "Indicates that there was an error parsing submitted form",
+      "message" : "Tidak dapat menghuraikan data borang: $error$",
+      "placeholders" : {
+         "error" : {
+            "example" : "sample error message",
+            "content" : "$1"
+         }
+      }
+   },
+   "logs_all" : {
+      "description" : "Label for applying an operation to all log files (such as delete or export)",
+      "message" : "Semua"
+   },
+   "quickNote_untitledNote" : {
+      "description" : "Placeholder title for untitled note",
+      "message" : "Nota tidak bertajuk"
+   },
+   "deleting" : {
+      "description" : "Message indicating that the extension is deleting previously clipped note from the server",
+      "message" : "Memadamkan nota berklip"
+   },
+   "login_searchHelperLongDescription" : {
+      "description" : "Description of the search-helper feature as shown on the options page",
+      "message" : "Apabila didayakan, carian anda pada enjin carian yang disokong juga akan dilakukan pada akaun Evernote anda. Lencana sambungan akan dikemas kini dengan kiraan nota yang sepadan. Enjin carian yang disokong ialah:Google, Bing, Yahoo, Yandex, dan Baidu."
+   },
+   "options_useTabsDescription" : {
+      "description" : "Description of Use Tabs option",
+      "message" : "Apabila didayakan, sebarang tetingkap baharu yang dibuka oleh sambungan tersebut akandibuka dalam tab baharu"
+   },
+   "EDAMError_3_User_active" : {
+      "description" : "Indicates that a user tried to login but their account is inactive",
+      "message" : "Keizinan ditolak kerana pengguna tidak aktif"
+   },
+   "invalidTagName" : {
+      "description" : "Indicates that at least one tag name contains at least one invalid character",
+      "message" : "Nama teg tidak boleh mengandungi sebarang aksara kawalan dan hendaklah bermula atau berakhir dengan ruang putih"
+   },
+   "options_clipStyle_text" : {
+      "description" : "Option for preserving styles only for the clipped text",
+      "message" : "Kekalkan gaya hanya untuk teks"
+   },
+   "options_autoSaveClipNote_never" : {
+      "description" : "Option for discarding changes",
+      "message" : "Buang perubahan yang tidak disimpan"
+   },
+   "options_fullPage_remember" : {
+      "description" : "Option for remembering previously used setting regarding full page clipping",
+      "message" : "Ingat"
+   },
+   "clippingPageContent" : {
+      "description" : "Message indicating that the extension is currently clipping text from a tab",
+      "message" : "Mengklip kandungan halaman..."
+   },
+   "EDAMError_6_mailTo" : {
+      "description" : "Indicates that the user is exceeding number of daily emails or specified too many recepients",
+      "message" : "Anda tidak boleh menghantar klip ini melalui e-mel kerana anda mungkin menyatakan terlalu banyak alamat e-mel atau melebihi kuota harian anda"
+   },
+   "logs_delete" : {
+      "description" : "Title of the button for deleting selected log",
+      "message" : "Padam"
+   },
+   "quickNote_addTags" : {
+      "description" : "Placeholder text for tag input",
+      "message" : "Klik untuk menambah teg"
+   },
+   "options_storedCredentialsDescription" : {
+      "description" : "Educational message for users who wish to store their Evernote password. First sentence is the most critical one as it will be used in options_storedCredentialsShortDescription",
+      "message" : "<b>NOTA:<\/b> Menyimpan kata laluan turut membolehkan orang lain mencapai akaun Evernote anda apabila menggunakan penyemak imbas ini. Alih keluar atau daftar keluar daripada sambungan Klipkan pada Evernote untuk mengalih keluar nama pengguna dan kata laluan yang disimpan secara kekal dalam sambungan penyemak imbas anda."
+   },
+   "desktopNotification_viewSuccessClip" : {
+      "description" : "Name of the actions associated with viewing clipped note",
+      "message" : "Lihat"
+   },
+   "checkVersionWarning" : {
+      "description" : "Warning message shown to user when the client doesn't pass version check",
+      "message" : "This version of Evernote Web Clipper is no longer compatible with Evernote Service. Please install the latest version."
+   },
+   "invalidTitle" : {
+      "description" : "Indicates that user entered title with invalid characters",
+      "message" : "Tajuk tidak boleh mengandungi sebarang aksara kawalan dan hendaklah bermula atau berakhir dengan ruang putih."
+   },
+   "fileSuccess" : {
+      "description" : "Message indicating that changes to clipped note were successfully filed",
+      "message" : "Berjaya memfailkan nota..."
+   },
+   "noteList_nothingFound" : {
+      "description" : "Message shown when there's no search results",
+      "message" : "Nota tidak dijumpai..."
+   },
+   "fileForm_comment" : {
+      "description" : "Label for additional text to be added to the note",
+      "message" : "Tambah teks"
+   },
+   "options_fullPage" : {
+      "description" : "Label for full page clipping option",
+      "message" : "Klipkan halaman penuh"
+   },
+   "options_enableDebuggingDescription" : {
+      "description" : "Description and warning message of the option that enables debugging",
+      "message" : "Apabila didayakan, sambungan akan dikendalikan dalam nod penyahpepijatan. Mod penyahpepijatan berfungsi perlahan dan tidak harus digunakan melainkan anda sedang menyelesai masalah. <a target='_blank' href='\/logs.html'>Lihat log<\/a>"
+   },
+   "EDAMError_8" : {
+      "description" : "Indicates that authentication was invalid",
+      "message" : "Pengesahan tidak sah"
+   },
+   "log_deleteFileError" : {
+      "description" : "Error message shown to user when an error occurs during deletion of a log file",
+      "message" : "Ralat memadamkan fail log: $error$",
+      "placeholders" : {
+         "error" : {
+            "example" : "1",
+            "content" : "$1"
+         }
+      }
+   },
+   "options_selectionNudgingDescription" : {
+      "description" : "Description of selection nudging",
+      "message" : "Apabila didayakan, anda boleh mengubah suai pilihan artikel menggunakan papan kekunci anda sebelum membuat klip. Mendayakan dengan &quot;tiada petua&quot; akan menghalang pemaparan pesanan bermaklumat. Apabila dilumpuhkan - anda tidak boleh membuat sebarang penyesuaian kepada pemilihan artikel automatik."
+   },
+   "viewNoteInEvernote" : {
+      "description" : "Link to a note in Evernote",
+      "message" : "Lihat dalam Evernote"
+   },
+   "loginForm_passwordError_8" : {
+      "description" : "",
+      "message" : "Nama pengguna dan kata laluan tidak sepadan dengan pengguna sedia ada."
+   },
+   "partLengthNotInRange" : {
+      "description" : "Indicates that each value, out of a list of values, should be between min and max characters long",
+      "message" : "Setiap $fieldName$ haruslah antara $min$ dan $max$ aksara panjangnya.",
+      "placeholders" : {
+         "min" : {
+            "example" : "1",
+            "content" : "$2"
+         },
+         "max" : {
+            "example" : "10",
+            "content" : "$3"
+         },
+         "fieldName" : {
+            "example" : "Tag",
+            "content" : "$1"
+         }
+      }
+   }
+}

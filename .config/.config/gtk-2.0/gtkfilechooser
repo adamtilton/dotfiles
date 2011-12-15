@@ -1,0 +1,4 @@
+<gtkfilechooser>
+  <location mode="filename-entry"/>
+  <show_hidden value="true"/>
+</gtkfilechooser>

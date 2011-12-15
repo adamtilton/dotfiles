@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/evernote.css" />
+    <link rel="stylesheet" type="text/css" href="css/logviewer.css" />
+    
+    <!-- 3rd party libs -->
+    <script type="text/javascript" src="libs/jquery/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="libs/json2.js"></script>
+    <script type="text/javascript" src="libs/simpledateformat.js"></script>
+    <script type="text/javascript" src="libs/jszip/jszip.js"></script>
+    <script type="text/javascript" src="libs/jszip/jszip-deflate.js"></script>
+    
+    <script type="text/javascript" src="libs/evernote-cr/evernoteChromeExtension.js"></script>
+    
+    <!-- startup -->
+    <script type="text/javascript">
+      var logViewer = null;
+      $(document).ready(function() {
+        Evernote.Logger.setInstance(Evernote.chromeExtension.logger);
+        Evernote.Utils.localizeBlock($("body"));
+        logViewer = new Evernote.ChromeLogViewer();
+      });
+    </script>
+  </head>
+  <body class="logs">
+    <div id="logsHeader">
+      <form action="#" method="get" name="logSelectorForm" id="logSelectorForm">
+        <label for="logSelector" message="logs_selectLogFile"></label>
+        <select id="logSelector">
+        </select>
+        &nbsp;
+        <label for="logRefreshRate" message="logs_refreshRate"></label>
+        <select name="logRefreshRate" id="logRefreshRate">
+          <option value="0" message="logs_dontRefresh"></option>
+          <option value="1000">1s</option>
+          <option value="5000">5s</option>
+          <option value="10000">10s</option>
+          <option value="30000">30s</option>
+          <option value="60000">60s</option>
+        </select>
+        &nbsp;
+        <input type="checkbox" name="logFollow" id="logFollow"></input>
+        <label for="logFollow" message="logs_follow"></label>
+        
+        <div id="logsStatus">
+          <span id="spinner" style="display: none;"><img src="images/spinner.gif"/></span>
+          <div id="logActions">
+            <input type="button" id="logDelete" message="logs_delete"/>
+            &nbsp;
+            <input type="button" id="logExport" message="logs_export"/>
+            &nbsp;
+            <input type="checkbox" id="logAll"/>&nbsp;<label for="logAll" message="logs_all"></label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="logViewer">
+    </div>
+  </body>
+</html>

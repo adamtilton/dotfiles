@@ -1,0 +1,224 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" />
+  <link rel="stylesheet" type="text/css" href="css/evernote.css" />
+  <link rel="stylesheet" type="text/css" href="css/forms.css" />
+  <link rel="stylesheet" type="text/css" href="css/tabbedview.css" />
+  <link rel="stylesheet" type="text/css" href="css/notelist.css" />
+  <link rel="stylesheet" type="text/css" href="css/popup.css" />
+  
+  <!-- 3rd party libs -->
+  <script type="text/javascript" src="libs/jquery/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="libs/jquery/jquery.scrollTo-1.4.2-min.js"></script>
+  <script type="text/javascript" src="libs/jquery/jquery.autocomplete.pack.js"></script>
+  <script type="text/javascript" src="libs/jquery/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="libs/jquery/jquery.validate.methods.js"></script>
+  <script type="text/javascript" src="libs/jquery/jquery.observeform.js"></script>
+  <script type="text/javascript" src="libs/jquery/jquery-ui-1.8.fx.min.js"></script>
+  <script type="text/javascript" src="libs/jquery/jquery.ascrollable.js"></script>
+  <script type="text/javascript" src="libs/jquery/jquery.tabdrawer.js"></script>
+  <script type="text/javascript" src="libs/jquery/jquery.tabbedView.js"></script>
+  <script type="text/javascript" src="libs/json2.js"></script>
+  <script type="text/javascript" src="libs/simpledateformat.js"></script>
+  
+  <script type="text/javascript" src="libs/evernote-cr/evernoteChromeExtension.js"></script>
+
+  <script type="text/javascript">
+      var popup = null;
+      var LOG = null;
+			$(document).ready(function popupHtml() {
+        LOG = Evernote.chromeExtension.getLogger();
+        window.onerror = function(errorMsg, url, lineNumber) {
+          LOG.exception("\n" + url + ":" + lineNumber + ": " + errorMsg + "\n");
+        }
+        Evernote.Logger.setInstance(Evernote.chromeExtension.logger);
+        chrome.windows.getCurrent(function(win) {
+          chrome.tabs.getSelected(win.id, function(tab) {
+            popup = new Evernote.ChromePopup(win, tab);
+            if (!Evernote.context.clientEnabled) {
+              popup.viewManager.showError(new Evernote.EDAMUserException(Evernote.EDAMErrorCode.VERSION_CONFLICT));
+              return;
+            }
+            Evernote.ViewManager.getInstance().wait(chrome.i18n.getMessage("loading"));
+            // startup with setTimeout for better UX
+            setTimeout(function(){
+              popup.remoteSyncState(function(response) {
+                popup.startUp();
+              }, function(xhr, textStatus, response) {
+                popup.popupStatus = Evernote.ChromePopup.POPUP_STATUS_CODES.STARTED;
+                if (response instanceof Evernote.EDAMResponse && response.hasAuthenticationError()) {
+                  LOG.info("Present login screen due to authentication error on initial sync");
+                  popup.viewManager.switchView("loginView");
+				} else if (!Evernote.getContext(true).getSyncState(true)) {
+					LOG.info("Tried to startup w/o any syncState. This can happen when we're asking server for syncState too frequently and no previous syncState was stored. Recovering by presenting loginView.");
+					popup.viewManager.switchView("loginView");
+                } else if (Evernote.context.userKnown) {
+                  popup.offline = true;
+                  LOG.debug("Starting up despite an error with initial syncState retreival, because the user is known");
+                  popup.startUp();
+                } else {
+                  LOG.debug("Unknown and unhadled error during popup startup.");
+                  popup.viewManager.showError(chrome.i18n.getMessage("UnknownError"));
+                }
+              });
+            }, 300);
+          });
+        });
+			});
+		</script>
+</head>
+<body class="popup">
+  <div id="spinner" class="spinner banner">
+    <div id="spinnerMessage"></div>
+  </div>
+  <div id="globalMessage" class="globalMessage banner">
+  </div>
+  <div id="header" style="display: none;">
+    <div id="headerLogo">
+      <a href="javascript:popup.goHome();" tabindex="-1"><img src="images/popup_logo.png"/></a>
+      <span id="headerLogoMessage"></span>
+    </div>
+    <div id="headerUser" class="headerLinks">
+      <a id="headerSignout" message="signout" href="javascript:popup.logout();" tabindex="100"></a> (<span id="headerUsername"></span>)
+    </div>
+    <div id="headerNoUser" class="headerLinks">
+      <a id="headerRegister" message="header_register" href="javascript:popup.goRegister();" tabindex="6"></a>
+    </div>
+  </div>
+  <div id="globalErrorMessage" class="globalErrorMessage banner">
+  </div>
+  <div id="loginView" class="view">
+    <h2 message="loginToEvernote"></h2>
+    <form name="loginForm" action="#">
+      <table class="formTable">
+        <tr>
+          <td><label for="username" message="loginForm_username"></label></td> 
+          <td><input type="text" name="username" maxlength="64" style="text-transform: lowercase" tabindex="1"/> </td>
+        </tr>
+        <tr>
+          <td><label for="password" message="loginForm_password"></label></td> 
+          <td><input type="password" name="password" maxlength="64" tabindex="2"/> </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <input type="checkbox" id="useSearchHelper" name="useSearchHelper" tabindex="3"/><label for="useSearchHelper" message="loginForm_searchHelper"></label><br/>
+            <div id="login_searchHelperShortDescription" class="loginDescription" style="padding-left: 21px;">
+              <a onclick="popup.viewManager.switchElements($('#login_searchHelperShortDescription'), $('#login_searchHelperLongDescription'))" message="loginForm_whatsThis"></a>
+            </div>
+            <div id="login_searchHelperLongDescription" class="loginDescription" style="padding-left: 21px; display: none;" message="login_searchHelperLongDescription"></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="min-width: 100px;">&nbsp;</td>
+          <td>
+            <input type="checkbox" name="rememberMe" tabindex="4"/><label for="rememberMe" message="loginForm_rememberMe"></label>
+            <div id="login_storedCredentialsShortDescription" class="loginDescription friendlyWarning" style="padding-left: 21px;">
+              <span message="options_storedCredentialsShortDescription"></span>
+              <a onclick="popup.viewManager.switchElements($('#login_storedCredentialsShortDescription'), $('#login_storedCredentialsDescription'))" message="more"></a>
+            </div>
+            <div id="login_storedCredentialsDescription" class="loginDescription friendlyWarning" style="padding-left: 21px; display: none;" message="options_storedCredentialsDescription"></div>
+          </td>
+        </tr>
+        <tr class="actionControlRow">
+          <td>&nbsp;</td>
+          <td>
+            <input type="submit" name="login" message="loginForm_login" style="margin-bottom: 8px;" tabindex="5"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div id="quickNoteView" class="view">
+    <!-- h2 message="quickNote"></h2 -->
+    <form name="quickNoteForm" class="compactForm" action="#">
+      <div class="row firstRow">
+        <input class="row firstRow" type="text" name="title" title="quickNote_title" maxlength="255" tabindex="7" placeholder="quickNote_untitledNote"/>
+      </div>
+      <div class="row rowPadded notebookField">
+        <select class="notebookSelect" name="notebookGuid" title="quickNote_notebook" tabindex="8"></select>
+      </div>
+      <div class="row rowPadded tagField">
+        <input type="text" name="tagNames" maxlength="10100" title="quickNote_tagNames" tabindex="9" placeholder="quickNote_addTags"/>
+      </div>
+      <div class="row rowPadded lastRow commentField">
+        <textarea name="comment" rows="1" tabindex="10" title="quickNote_comment" placeholder="quickNote_addComment"></textarea>
+      </div>
+      <div class="actions">
+        <div class="submitWithOptions">
+          <input type="submit" name="quickNote" id="quickNoteSubmit" message="quickNote_submit" tabindex="11"/>
+          <select id="clipAction" class="submitOptions" tabindex="12">
+            <option value="CLIP_ACTION_ARTICLE" message="quickNoteAction_clipArticle"></option>
+            <option value="CLIP_ACTION_SELECTION" message="quickNoteAction_clipSelection"></option>
+            <option value="CLIP_ACTION_FULL_PAGE" message="quickNoteAction_clipFullPage"></option>
+            <option value="CLIP_ACTION_URL" message="quickNoteAction_clipURL"></option>
+          </select>
+        </div>
+      </div>
+      <textarea name="content" style="display: none;"></textarea>
+      <input type="hidden" name="url" />
+    </form>
+  </div>
+  
+  <div id="notesView" class="view" style="display: none;">
+    <h2 message="notesViewTitle"></h2>
+    <div id="notesTabbedView" class="tabbedView closed">
+      <div class="tabButtons">
+        <a class="tabButton firstTabButton closed" data-tabbedviewbutton="allNotes" id="myNotesTabButton" message="notesView_myNotes" tabindex="13"></a>
+        <a class="tabButton lastTabButton closed" data-tabbedviewbutton="siteMemory" id="siteMemoryTabButton" tabindex="14">&nbsp;</a>
+      </div>
+      <div class="tabSeparator"></div>
+      <div class="tabViews">
+        <div class="tabView firstTabView closed" data-tabbedview="allNotes">
+          <div id="notesSearchContainer" class="notelistSearchContainer">
+            <form name="notesSearchForm" class="notelistSearchForm" action="#" onSubmit="popup.submitNotesSearchForm(); return false;">
+              <input type="search" id="notesSearchQuery" class="notelistSearchQuery" name="notesSearchQuery" placeholder="notesView_searchNotesPlaceholder" tabindex="15"/>
+            </form>
+            <div id="notesList" class="scrollable vertical" style="position: relative">
+              <div id="notesListItems" class='items' style="position: absolute; display: none;"></div>
+              <div id="notesListLoadingContainer" class="notelistMessageContainer" style="display: none;">
+                <div id="notesListLoadingIndicator">
+                  <img src='images/spinner.gif'/>
+                  <div message="notesList_loading"></div>
+                </div>
+              </div>
+              <div id="notesListEmptyContainer" class="notelistMessageContainer" style="display: none;">
+                <div id="notesListEmptyIndicator">
+                  <div message="noteList_nothingFound"></div>
+                  <small message="noteList_modifySearch"></small>
+                </div>
+              </div>
+              <div id="notesListErrorContainer" class="notelistMessageContainer" style="display: none;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tabView lastTabView closed" data-tabbedview="siteMemory">
+          <div id="notesContextContainer" class="notelistSearchContainer">
+          <div id="notesContextListTitle"></div>
+          <div id="notesContextList" class="scrollable vertical drawerComponent" style="position: relative">
+            <div id="notesContextListItems" class='items' style="position: absolute; display: none;"></div>
+            <div id="notesContextListLoadingContainer" class="notelistMessageContainer" style="display: none;">
+              <div id="notesContextListLoadingIndicator">
+                <img src='images/spinner.gif'/>
+                <div message="notesList_loading"></div>
+              </div>
+            </div>
+            <div id="notesContextListEmptyContainer" class="notelistMessageContainer" style="display: none;">
+              <div id="notesContextListEmptyIndicator">
+                <div message="noteList_nothingFound"></div>
+                <small message="noteList_modifySearch"></small>
+              </div>
+            </div>
+            <div id="notesContextListErrorContainer" class="notelistMessageContainer" style="display: none;">
+              </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

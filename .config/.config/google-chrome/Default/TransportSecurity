@@ -1,0 +1,51 @@
+{
+   "+eNia3684jHXBV3WOYKSo7tlx6gZvJne4CW+3ruNW/I=": {
+      "created": 1322845874.97753,
+      "expiry": 1354381874.97753,
+      "include_subdomains": true,
+      "mode": "strict",
+      "public_key_hashes": [  ]
+   },
+   "2dRaiDAFraMJSwT5W0NKwZhgGurQk1HcrbrOoZbjqQM=": {
+      "created": 1317954766.650128,
+      "expiry": 1349490767.665322,
+      "include_subdomains": true,
+      "mode": "strict",
+      "public_key_hashes": [  ]
+   },
+   "EPmcA7woOtrVWAGuo9c1YLR48mSW8KSLC0bED1BU0JM=": {
+      "created": 1314379454.102552,
+      "expiry": 1339636482.420965,
+      "include_subdomains": false,
+      "mode": "strict",
+      "public_key_hashes": [  ]
+   },
+   "P9kyk7bnxZuJHcyRRw+gVO6yWjrSkVqIS26GRL7U9VI=": {
+      "created": 1317658635.457128,
+      "expiry": 1349194635.457128,
+      "include_subdomains": false,
+      "mode": "strict",
+      "public_key_hashes": [  ]
+   },
+   "bVzOnu6xyelN8iVLDSbFjyZVgXrXDyLSokjnq2hdUFs=": {
+      "created": 1313430278.650484,
+      "expiry": 1326158058.607583,
+      "include_subdomains": false,
+      "mode": "strict",
+      "public_key_hashes": [  ]
+   },
+   "mPA/INyvbBufIejotw/nxkqXMSZ6f1+GY8zDuTq0MfE=": {
+      "created": 1314113558.662624,
+      "expiry": 1338574190.846104,
+      "include_subdomains": false,
+      "mode": "strict",
+      "public_key_hashes": [  ]
+   },
+   "vfOfIzO182P+C5rz+0lrCuuYXZ3sQFdq0qm6SKdxFpE=": {
+      "created": 1322594780.874432,
+      "expiry": 1325362716.20934,
+      "include_subdomains": false,
+      "mode": "strict",
+      "public_key_hashes": [  ]
+   }
+}

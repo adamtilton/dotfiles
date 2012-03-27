@@ -23,6 +23,6 @@ alias grr='git remote rm'
 alias gpu='git pull'
 alias gcl='git clone'
 
-alias shunya='ssh -Y atilton2@sunnata.csl.illinois.edu'
+alias shunya='ssh -Y atilton2@shunya.csl.illinois.edu'
 alias sunnata='ssh -Y atilton2@sunnata.csl.illinois.edu'
 alias shunyata='ssh -Y atilton2@shunyata.csl.illinois.edu'

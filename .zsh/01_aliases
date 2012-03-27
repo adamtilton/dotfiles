@@ -6,8 +6,6 @@ alias la="ll"
 alias kX="killall X"
 alias vsplit="vim -O"
 
-alias matlab="wmname LG3D && matlab &"
-
 alias ga='git add'
 alias gp='git push'
 alias gl='git log --pretty=oneline'

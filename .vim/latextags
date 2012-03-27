@@ -1,1 +1,11 @@
-/home/atilton2/src/dotfiles/.vim/latextags
+#!/usr/bin/perl
+
+foreach $fname (@ARGV) {
+	$tags = `fgrep \\label $fname`;
+	@tagsList = split('\n', $tags);
+	foreach $tag (@tagsList) {
+		$tag =~ /.*\\label{([^}]*)}/;
+		$tagName = $1;
+		print "$tagName\t$fname\t/label{$tagName}/\n";
+	}
+}

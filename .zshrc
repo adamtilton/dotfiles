@@ -13,13 +13,4 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-
-# Set the SVN Source
-SVNCOURSE=https://subversion.ews.illinois.edu/svn/sp12-cs555
-
-# FEnicS Envoironment Variables
-source /usr/share/dolfin/dolfin.conf  
-# export PETSC_DIR=/usr/lib/petsc/arch-linux2-cxx-debug
-
-
 source ~/.zsh/01_aliases

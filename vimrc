@@ -155,7 +155,6 @@ set shiftwidth=2
 set cot+=menuone
 
 "set spell spelllang=en_us
-call pathogen#infect()
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 filetype plugin indent on

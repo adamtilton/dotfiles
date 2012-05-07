@@ -22,7 +22,7 @@ source /usr/share/dolfin/dolfin.conf
 # export PETSC_DIR=/usr/lib/petsc/arch-linux2-cxx-debug
 
 # Add FilterPy to python's path 
-export PYTHONPATH=$PYTHONPATH:/home/atilton2/src/python
+export PYTHONPATH=/home/atilton2/src/python:$PYTHONPATH
 
 
 source ~/.zsh/01_aliases

@@ -7,6 +7,7 @@ alias kX="killall X"
 alias vo="vim -O"
 
 alias matlab="wmname LG3D && matlab &"
+alias jekyll="/home/atilton2/.gem/ruby/1.9.1/bin/jekyll"
 
 alias ga='git add'
 alias gp='git push'
@@ -26,3 +27,4 @@ alias gcl='git clone'
 alias shunya='ssh -Y atilton2@sunnata.csl.illinois.edu'
 alias sunnata='ssh -Y atilton2@sunnata.csl.illinois.edu'
 alias shunyata='ssh -Y atilton2@shunyata.csl.illinois.edu'
+alias polymath='ssh -Y adam@polymath.dyndns-server.com'

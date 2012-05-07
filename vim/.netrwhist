@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/atilton2/dotfiles/oh-my-zsh/plugins'
 let g:netrw_dirhist_2='/home/atilton2/dotfiles/oh-my-zsh/custom'
 let g:netrw_dirhist_3='/home/atilton2/research/filterpy/test'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/home/atilton2/personal/atilton.github.com/img'
 let g:netrw_dirhist_6='/home/atilton2/personal/atilton.github.com/_posts'
 let g:netrw_dirhist_7='/home/atilton2/personal/atilton.github.com'
 let g:netrw_dirhist_8='/home/atilton2/personal/atilton.github.com/_posts'
+let g:netrw_dirhist_9='/home/atilton2/dotfiles/vim/ftdetect'

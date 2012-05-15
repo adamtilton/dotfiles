@@ -6,8 +6,6 @@ alias la="ll"
 alias kX="killall X"
 alias vo="vim -O"
 
-alias matlab="wmname LG3D && matlab &"
-
 alias ga='git add'
 alias gp='git push'
 alias gl='git log --pretty=oneline'
@@ -26,3 +24,4 @@ alias gcl='git clone'
 alias shunya='ssh -Y atilton2@sunnata.csl.illinois.edu'
 alias sunnata='ssh -Y atilton2@sunnata.csl.illinois.edu'
 alias shunyata='ssh -Y atilton2@shunyata.csl.illinois.edu'
+alias nada='ssh -Y atilton2@nada.csl.illinois.edu'

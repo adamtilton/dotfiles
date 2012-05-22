@@ -30,8 +30,8 @@ filetype plugin on
 set t_Co=256
 syntax on                   " syntax highlighting on
 colorscheme fu 
-set background=dark
 set showmatch             " show matching paren when bracked inserted
+set background=dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Movement
@@ -46,15 +46,15 @@ set whichwrap+=<,>,h,l    " allow cursor keys to wrap around columns
 "" Buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" easier switch between windows
-"map <C-j> <C-W>j
-"map <C-k> <C-W>k
-"map <C-h> <C-W>h
-"map <C-l> <C-W>l
-"if bufwinnr(1)
-"  map - <C-W>-
-"  map + <C-W>+
-"endif
-"
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+if bufwinnr(1)
+  map - <C-W>-
+  map + <C-W>+
+endif
+
 "set splitbelow " split new vertical buffers beneath current buffer
 "set splitright " split new horizontal buffers to the right of current buffer
 "
@@ -103,8 +103,9 @@ set omnifunc=syntaxcomplete#Complete " C-X C-O
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nofoldenable          " open all folds
-set foldmethod=indent " manual, marker, syntax, try set foldcolumn=2
+" SEE FILETYPE SPECIFIC PLUGINS
+" set nofoldenable          " open all folds
+" set foldmethod=indent " manual, marker, syntax, try set foldcolumn=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Command line

@@ -19,7 +19,7 @@ set number
 "   %P percentage through buffer (smart, includes 'Top' and 'Bot'
 "     markers)
 "   %) end of width specification
-set statusline=%<\ %n:%f\ %m%r%y[%{&fo}]%=%-35.(L\ %l\ /\ %L;\ C\ %c%V\ (%P)%)
+set statusline=%<\ %n:%f\ %m%r%y[%{&fo}]%=%-35.(L\ %l\ /\ %L;\ C\ %c%V\ (%P)%)%{fugitive#statusline()}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and syntax highlighting

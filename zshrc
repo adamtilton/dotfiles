@@ -13,16 +13,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-
-# Set the SVN Source
-SVNCOURSE=https://subversion.ews.illinois.edu/svn/sp12-cs555
-
-# FEnicS Envoironment Variables
-source /usr/share/dolfin/dolfin.conf  
-# export PETSC_DIR=/usr/lib/petsc/arch-linux2-cxx-debug
-
-# Add FilterPy to python's path 
+# Add a python path for my source 
 export PYTHONPATH=/home/atilton2/src/python:$PYTHONPATH
 
-
+# Grab my aliases
 source ~/.zsh/01_aliases

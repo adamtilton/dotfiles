@@ -19,9 +19,10 @@ set number
 "   %P percentage through buffer (smart, includes 'Top' and 'Bot'
 "     markers)
 "   %) end of width specification
-set statusline=%<\ %n:%f\ %m%r%y[%{&fo}]%=%-35.(L\ %l\ /\ %L;\ C\ %c%V\ (%P)%)
 " Show git Branch
-set statusline+=%{fugitive#statusline()}
+set statusline=%{fugitive#statusline()}
+" Add Other
+set statusline+=%<\ %n:%f\ %m%r%y[%{&fo}]%=%-35.(L\ %l\ /\ %L;\ C\ %c%V\ (%P)%)
 " syntastic status line
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -159,6 +160,14 @@ set shiftwidth=2
 
 " show scratch function prototype even when only one match
 set cot+=menuone
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Close vim if only window left open is NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"Open NERDTree when vim stars up
+" autocmd vimenter * NERDTree
 
 "set spell spelllang=en_us
 call pathogen#infect()

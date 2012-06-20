@@ -36,3 +36,6 @@ source $HOME/src/neuron/nrnenv
 source ~/.zsh/01_aliases
 
 # Customize to your needs...
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

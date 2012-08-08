@@ -1,14 +1,13 @@
-"padding"
+! "padding"
 urxvt.internalBorder:   6 
 urxvt.externalBorder:   0
-urxvt.urgentOnBell:             true
-urxvt.cursorBlink:              true
-urxvt.cursorColor:             black
-urxvt.cursorColor2:             white
-urxvt.cursorUnderline: true
-urxvt.underlineColor: yellow
+urxvt.urgentOnBell:     true
+urxvt.cursorBlink:      true
+urxvt.cursorColor:      gray
+urxvt.cursorColor2:     black
+urxvt.cursorUnderline:  false
+urxvt.underlineColor:   yellow
 
-urxvt*boldColors:on
 urxvt*buffered:true
 urxvt*depth:32
 urxvt*fading:0
@@ -32,9 +31,10 @@ urxvt*termName: rxvt-256color
 urxvt*transparentscrollbar:true
 urxvt*transpscrollbar:true
 
-urxvt*font: xft:Liberation Mono:size=16
-urxvt*boldFont: xft: Liberation Mono: size=16
-
+urxvt.perl-lib:                     /home/adam/.urxvt/
+urxvt.keysym.Control-Shift-Up:      perl:font:increment
+urxvt.keysym.Control-Shift-Down:    perl:font:decrement
+urxvt.perl-ext-common:              font
 
 /*
 *
@@ -52,7 +52,7 @@ xft.hintstyle: hintslight
 *       hyperlinks
 * */
 urxvt.perl-ext:           default,matcher
-urxvt*urlLauncher:firefox
+urxvt*urlLauncher:chromium
 urxvt.matcher.button:     1
 urxvt.keysym.C-Delete:    perl:matcher
 urxvt.underlineURLs:      true
@@ -69,6 +69,7 @@ urxvt*highlightColor:#444
 urxvt*background: #000
 urxvt*foreground: #d3d3d3
 
+#include "/home/atilton2/.config/xresources/fonts"
 ! theme
 !#include "/home/noah/.colors/tango"
 !#include "/home/noah/.colors/zenburn"

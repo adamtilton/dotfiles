@@ -30,9 +30,6 @@ source $ZSH/oh-my-zsh.sh
 # Add FilterPy to python's path 
 export PYTHONPATH=$HOME/src/python:$PYTHONPATH
 
-# Add NEURON Environment Variables
-source $HOME/src/neuron/nrnenv
-
 source $HOME/.zsh/01_aliases
 
 # Customize to your needs...

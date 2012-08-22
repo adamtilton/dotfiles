@@ -1,0 +1,31 @@
+alias va="vim ~/.zsh/01_aliases; source ~/.zsh/01_aliases"
+alias ..="cd .."
+alias ll="ls -lh"
+alias la="ll"
+alias kX="killall X"
+alias vo="vim -O"
+
+alias matlab="wmname LG3D && matlab &"
+alias jekyll="/home/atilton2/.gem/ruby/1.9.1/bin/jekyll --server"
+alias gollum="/home/atilton2/.gem/ruby/1.9.1/bin/gollum"
+
+alias ga='git add'
+alias gp='git push'
+alias gl='git log --pretty=oneline'
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gb='git branch'
+alias gc='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpu='git pull'
+alias gcl='git clone'
+
+alias shunya='ssh -Y atilton2@sunnata.csl.illinois.edu'
+alias sunnata='ssh -Y atilton2@sunnata.csl.illinois.edu'
+alias shunyata='ssh -Y atilton2@shunyata.csl.illinois.edu'
+alias nada='ssh -Y atilton2@nada.csl.illinois.edu'
+alias polymath='ssh -Y adam@polymath.dyndns-server.com'

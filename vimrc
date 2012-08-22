@@ -19,8 +19,14 @@ set number
 "   %P percentage through buffer (smart, includes 'Top' and 'Bot'
 "     markers)
 "   %) end of width specification
-set statusline=%<\ %n:%f\ %m%r%y[%{&fo}]%=%-35.(L\ %l\ /\ %L;\ C\ %c%V\ (%P)%)
-
+" Show git Branch
+set statusline=%{fugitive#statusline()}
+" Add Other
+set statusline+=%<\ %n:%f\ %m%r%y[%{&fo}]%=%-35.(L\ %l\ /\ %L;\ C\ %c%V\ (%P)%)
+" syntastic status line
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and syntax highlighting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -30,8 +36,8 @@ filetype plugin on
 set t_Co=256
 syntax on                   " syntax highlighting on
 colorscheme fu 
-set background=dark
 set showmatch             " show matching paren when bracked inserted
+set background=dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Movement
@@ -46,15 +52,15 @@ set whichwrap+=<,>,h,l    " allow cursor keys to wrap around columns
 "" Buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" easier switch between windows
-"map <C-j> <C-W>j
-"map <C-k> <C-W>k
-"map <C-h> <C-W>h
-"map <C-l> <C-W>l
-"if bufwinnr(1)
-"  map - <C-W>-
-"  map + <C-W>+
-"endif
-"
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+if bufwinnr(1)
+  map - <C-W>-
+  map + <C-W>+
+endif
+
 "set splitbelow " split new vertical buffers beneath current buffer
 "set splitright " split new horizontal buffers to the right of current buffer
 "
@@ -103,8 +109,9 @@ set omnifunc=syntaxcomplete#Complete " C-X C-O
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nofoldenable          " open all folds
-"set foldmethod=manual     " manual, marker, syntax, try set foldcolumn=2
+" SEE FILETYPE SPECIFIC PLUGINS
+" set nofoldenable          " open all folds
+" set foldmethod=indent " manual, marker, syntax, try set foldcolumn=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Command line
@@ -154,7 +161,16 @@ set shiftwidth=2
 " show scratch function prototype even when only one match
 set cot+=menuone
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Close vim if only window left open is NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"Open NERDTree when vim stars up
+" autocmd vimenter * NERDTree
+
 "set spell spelllang=en_us
+call pathogen#infect()
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 filetype plugin indent on

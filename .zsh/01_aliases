@@ -1,7 +1,0 @@
-alias va="vim ~/.zsh/01_aliases; source ~/.zsh/01_aliases"
-alias ..="cd .."
-alias ls="ls --color"
-alias ll="ls -lh"
-alias la="ll"
-alias kX="killall X"
-alias matlab="wmname LG3D && matlab &"

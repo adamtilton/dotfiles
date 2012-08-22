@@ -297,7 +297,7 @@ globalkeys = awful.util.table.join(
     awful.key({}, "XF86AudioNext", function() sexec("cmus-remote --next") end ),
     awful.key({}, "XF86AudioPrev", function() sexec("cmus-remote --prev") end ),
     awful.key({}, "XF86AudioPlay", function() sexec("cmus-remote --pause") end ),
-    awful.key({}, "XF86ScreenSaver", function() sexec("xlock -mode blank") end ),                   --fn - f2
+    awful.key({}, "XF86HomePage", function() sexec("xlock -mode blank") end ),                   --fn - f2
     -- awful.key({}, "XF86AudioStop", function() sexec("scrot -e 'mv $f ~/bilder/screenshots'") end ), --fn - up
     -- awful.key({}, "XF86Tools", function() sexec("") end ),
     -- awful.key({}, "XF86Calculator", function() sexec("") end ),

@@ -78,13 +78,10 @@ tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     tags[s] = awful.tag({ 
-     "1 systerm", "2 sysweb", "3 workterm", 
-     "4 workweb", "5 misc", "6 misc", 
-     "7 misc", "8 misc", "9 misc"}, s,
+     "1 term", "2 web", "3 xbmc", 
+     "4 misc"}, s,
     {layouts[3], layouts[1], layouts[1], -- Tags: 1, 2, 3
-     layouts[1], layouts[1], layouts[1], --       4, 5 ,6
-     layouts[1], layouts[1], layouts[1]  --       7, 8, 9
-    })
+     layouts[1]})
 end
 -- }}}
 
@@ -117,7 +114,7 @@ separator.text = " <span foreground='red'></span> "
 
 -- {{{ CPU load 
 local cpuwidget = widget({ type = "textbox" })
-vicious.register(cpuwidget, vicious.widgets.cpu," <span foreground='#e2eeea'>load: </span><span foreground='#2e3436'>$2%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$3%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$4%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$5%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$6%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$7%</span>")
+vicious.register(cpuwidget, vicious.widgets.cpu," <span foreground='#e2eeea'>load: </span><span foreground='#2e3436'>$1% </span>")
 -- }}}
  
 -- {{{ CPU temperature

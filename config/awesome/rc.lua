@@ -15,7 +15,7 @@ local exec   = awful.util.spawn
 local sexec  = awful.util.spawn_with_shell
 
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/atilton2/.configure/awesome/themes/sky/theme.lua")
+beautiful.init("/home/atilton2/.config/awesome/themes/sky/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvtc"
@@ -166,6 +166,7 @@ vicious.register(pacwidget, vicious.widgets.pkg,
 
                 --'1800' means check every 30 minutes
 -- }}}
+
 -- {{{ Top Box
 local wibox     = {}
 local promptbox = {}

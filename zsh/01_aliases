@@ -7,7 +7,6 @@ alias vo="vim -O"
 
 alias matlab="wmname LG3D && matlab &"
 alias jekyll="/home/atilton2/.gem/ruby/1.9.1/bin/jekyll --server"
-alias gollum="/home/atilton2/.gem/ruby/1.9.1/bin/gollum"
 
 alias ga='git add'
 alias gp='git push'

@@ -30,15 +30,14 @@ source $ZSH/oh-my-zsh.sh
 # Add FilterPy to python's path 
 export PYTHONPATH=$HOME/src/python:$PYTHONPATH
 
-# Add NEURON Environment Variables
-source $HOME/src/neuron/nrnenv
-
 source $HOME/.zsh/01_aliases
 
 # Customize to your needs...
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+# Add Ruby Gems to path
+PATH=$PATH:$HOME/.gem/ruby/1.9.1/bin 
 
 if [ "$TERM" = "linux" ]; then
     _SEDCMD='s/.*\*color\([0-9]\{1,\}\).*#\([0-9a-fA-F]\{6\}\).*/\1 \2/p'

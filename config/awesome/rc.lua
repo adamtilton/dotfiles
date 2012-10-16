@@ -381,7 +381,33 @@ clientkeys = awful.util.table.join(
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
-        end)
+        end),
+
+
+    -- Two Screen Full Screen
+    awful.key({ modkey, "Shift" }, "f",        
+
+           function (c)
+               awful.client.floating.toggle(c)
+               if awful.client.floating.get(c) then
+                   local clientX = screen[1].workarea.x
+                   local clientY = screen[1].workarea.y
+                   local clientWidth = 0
+                   -- look at http://www.rpm.org/api/4.4.2.2/llimits_8h-source.html
+                   local clientHeight = 2147483640
+                   for s = 1, screen.count() do
+                       clientHeight = math.min(clientHeight, screen[s].workarea.height)
+                       clientWidth = clientWidth + screen[s].workarea.width
+                   end
+                   local t = c:geometry({x = clientX, y = clientY, width = clientWidth, height = clientHeight})
+               else
+                   --apply the rules to this client so he can return to the right tag if there is a rule for that.
+                   awful.rules.apply(c)
+               end
+               -- focus our client
+               client.focus = c
+           end)
+
 )
 
 -- Compute the maximum number of digit we need, limited to 9
@@ -417,7 +443,7 @@ for i = 1, keynumber do
                   end),
         awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
                   function ()
-                      if client.focus and tags[client.focus.screen][i] then
+                      if client.focus and tags[clent.focus.screen][i] then
                           awful.client.toggletag(tags[client.focus.screen][i])
                       end
                   end))
@@ -483,3 +509,7 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- {{{ Multiple Monitors 
+-- }}}
+

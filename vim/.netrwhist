@@ -1,11 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/atilton2/research/projects/AFO/simulation'
-let g:netrw_dirhist_2='/home/atilton2/.dropbox-illinois/.config'
-let g:netrw_dirhist_3='/home/atilton2/.dropbox-illinois/.dropbox'
-let g:netrw_dirhist_4='/home/atilton2/research/projects/hopf/example_01'
-let g:netrw_dirhist_5='/home/atilton2/research/projects/FilterPy/bin'
-let g:netrw_dirhist_6='/home/atilton2/research/projects/FilterPy/test'
-let g:netrw_dirhist_7='/home/atilton2/research/projects/FilterPy/bin'
-let g:netrw_dirhist_8='/home/atilton2/school/class/ECE517/homework'
-let g:netrw_dirhist_9='/home/atilton2/research/projects/FilterPy/bin'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/atilton2/research/projects/FilterPy.wiki/SRS'
+let g:netrw_dirhist_2='/home/atilton2/research/projects/FilterPy/bin'
+let g:netrw_dirhist_3='/home/atilton2/Dropbox/CS 427'

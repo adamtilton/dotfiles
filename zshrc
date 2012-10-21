@@ -37,7 +37,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add Ruby Gems to path
-PATH=$PATH:/root/.gem/ruby/1.9.1/bin 
+PATH=$PATH:$HOME/.gem/ruby/1.9.1/bin 
 
 if [ "$TERM" = "linux" ]; then
     _SEDCMD='s/.*\*color\([0-9]\{1,\}\).*#\([0-9a-fA-F]\{6\}\).*/\1 \2/p'

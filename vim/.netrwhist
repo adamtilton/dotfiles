@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/atilton2/research/projects/FilterPy.wiki/SRS'
+let g:netrw_dirhist_1='/home/atilton2/school/class/ECE517/final_project/presentation'
 let g:netrw_dirhist_2='/home/atilton2/research/projects/FilterPy/bin'
-let g:netrw_dirhist_3='/home/atilton2/Dropbox/CS 427'
+let g:netrw_dirhist_3='/home/atilton2/src/eclipse/readme'

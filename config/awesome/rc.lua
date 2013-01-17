@@ -1,17 +1,21 @@
 -- Standard awesome library
-require("awful")
+local gears = require("gears")
+local awful = require("awful")
+awful.rules = require("awful.rules")
 require("awful.autofocus")
-require("awful.rules")
 -- Theme handling library
-require("beautiful")
+local beautiful = require("beautiful")
 -- Notification library
-require("naughty")
-vicious = require("vicious")
+local naughty = require("naughty")
+local vicious = require("vicious")
+local menubar = require("menubar")
+-- Widget and layout library
+local wibox = require("wibox")
 -- }}}
 
 -- {{{ Variable definitions
 local home   = os.getenv("HOME")
-local exec   = awful.util.spawn
+local exec   = awful.util.spawn_with_shell
 local sexec  = awful.util.spawn_with_shell
 
 -- Themes define colours, icons, and wallpapers
@@ -34,7 +38,7 @@ end
 -- Handle runtime errors after startup
 do
     local in_error = false
-    awesome.add_signal("debug::error", function (err)
+    awesome.connect_signal("debug::error", function (err)
         -- Make sure we don't go into an endless error loop
         if in_error then return end
         in_error = true
@@ -102,45 +106,46 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
+mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
+
+-- Menubar configuration
+menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
 -- {{{ Wibox
 -- {{{ Widgets configuration
 -- {{{ Reusable separators
-local spacer         = widget({ type = "textbox", name = "spacer" })
-local separator      = widget({ type = "textbox", name = "separator" })
-spacer.text    = " "
-separator.text = " <span foreground='red'></span> "
+local spacer         = wibox.widget.textbox(" ")
+local separator      = wibox.widget.textbox(" <span foreground='red'></span> ")
 -- }}}
 
 -- {{{ CPU load 
-local cpuwidget = widget({ type = "textbox" })
+local cpuwidget = wibox.widget.textbox()
 vicious.register(cpuwidget, vicious.widgets.cpu," <span foreground='#e2eeea'>load: </span><span foreground='#2e3436'>$2%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$3%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$4%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$5%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$6%</span><span foreground='#e2eeea'> - </span><span foreground='#2e3436'>$7%</span>")
 -- }}}
  
 -- {{{ CPU temperature
-local thermalwidget  = widget({ type = "textbox" })
+local thermalwidget  = wibox.widget.textbox()
 vicious.register(thermalwidget, vicious.widgets.thermal, " <span foreground='#e2eeea'>temp: </span> <span foreground='#2e3436'>$1°C</span>", 20, { "coretemp.0", "core"} )
 -- }}}
 
 -- {{{ Date and time
-local datewidget = widget({ type = "textbox" })
+local datewidget = wibox.widget.textbox()
 vicious.register(datewidget, vicious.widgets.date, "<span foreground='#2e3436'>%a, %m.%d.%y - %H:%M</span>", 5)
 -- }}}
 
 -- {{{ Volume widget
-local volwidget = widget({ type = "textbox" })
+local volwidget = wibox.widget.textbox()
 vicious.register(volwidget, vicious.widgets.volume, "<span foreground='#e2eeea'>vol: </span><span foreground='#2e3436'>$1%</span>", 1, 'Master')
 -- }}}
 
 -- {{{ System tray
-systray = widget({ type = "systray" })
+systray = wibox.widget.textbox()
 -- }}}
 
 -- {{{ Uptime Widget
-local uptimewidget = widget({ type = "textbox" })
+local uptimewidget = wibox.widget.textbox()
   vicious.register(uptimewidget, vicious.widgets.uptime,
     function (widget, args)
       return string.format("<span foreground='#e2eeea'>uptime: </span><span foreground='#2e3436'>%2dd %02d:%02d</span> ", args[1], args[2], args[3], args[4])
@@ -148,7 +153,7 @@ local uptimewidget = widget({ type = "textbox" })
 -- }}}
 
 -- {{{ Pacman Widget
-local pacwidget = widget({type = "textbox"})
+local pacwidget = wibox.widget.textbox()
 pacwidget_t = awful.tooltip({ objects = { pacwidget},})
 vicious.register(pacwidget, vicious.widgets.pkg,
                 function(widget,args)
@@ -217,7 +222,7 @@ tasklist.buttons = awful.util.table.join(
 
 for s = 1, screen.count() do
     -- Create a promptbox
-    promptbox[s] = awful.widget.prompt({ layout = awful.widget.layout.horizontal.leftright })
+    promptbox[s] = awful.widget.prompt()
     -- Create a layoutbox
     layoutbox[s] = awful.widget.layoutbox(s)
     layoutbox[s]:buttons(awful.util.table.join(
@@ -228,35 +233,45 @@ for s = 1, screen.count() do
     ))
 
     -- Create a taglist widget
-    taglist[s] = awful.widget.taglist(s, awful.widget.taglist.label.all, taglist.buttons)
+    taglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, taglist.buttons)
 
     -- Create a tasklist widget
-    tasklist[s] = awful.widget.tasklist(
-                  function(c)
-                      return awful.widget.tasklist.label.currenttags(c, s)
-                  end,
-                  tasklist.buttons
-    )
+    tasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, tasklist.buttons)
 
     -- Create the wibox
-    wibox[s] = awful.wibox({
-        position = "top", screen = s,
-        fg = beautiful.fg_normal, bg = beautiful.bg_normal, height=beautiful.widget_height
-    })
-    -- Add widgets to the wibox
-    wibox[s].widgets = {{
-        launcher, taglist[s], layoutbox[s], promptbox[s],
-        layout = awful.widget.layout.horizontal.leftright
-    },
-        s == screen.count() and systray or nil,
-        spacer, datewidget,
-        separator, volwidget,
-        separator, batwidget,
-        separator, cpuwidget,
-        separator, thermalwidget,
-        separator, tasklist[s],
-        layout = awful.widget.layout.horizontal.rightleft
-    }
+    -- wibox[s] = awful.wibox({
+    --     position = "top", screen = s,
+    --     fg = beautiful.fg_normal, bg = beautiful.bg_normal, height=beautiful.widget_height
+    -- })
+    -- Create the wibox
+    wibox[s] = awful.wibox({ position = "top", screen = s })
+    --
+    -- Widgets that are aligned to the left
+    local left_layout = wibox.layout.fixed.horizontal()
+    left_layout:add(launcher)
+    left_layout:add(taglist[s])
+    left_layout:add(layoutbox[s])
+    left_layout:add(promptbox[s])
+    left_layout:add(layout[s])
+    
+    -- Widgets that are aligned to the right
+    local right_layout = wibox.layout.fixed.horizontal()
+    if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(spacer)
+    right_layout:add(datewidget)
+    right_layout:add(seperator)
+    right_layout:add(volwidget)
+    right_layout:add(seperator)
+    right_layout:add(cpuwidget)
+    right_layout:add(seperator)
+    right_layout:add(thermalwidget)
+    
+    -- Now bring it all together (with the tasklist in the middle)
+    local layout = wibox.layout.align.horizontal()
+    layout:set_left(left_layout)
+    layout:set_middle(tasklist[s])
+    layout:set_right(right_layout)
+    --
 end
 -- }}}
 

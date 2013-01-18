@@ -173,11 +173,12 @@ vicious.register(pacwidget, vicious.widgets.pkg,
 -- }}}
 
 -- {{{ Top Box
-local wibox     = {}
-local promptbox = {}
-local layoutbox = {}
-local taglist   = {}
-taglist.buttons = awful.util.table.join(
+local mywibox     = {}
+local mypromptbox = {}
+local mylayoutbox = {}
+local mytaglist   = {}
+
+mytaglist.buttons = awful.util.table.join(
                     awful.button({ }, 1, awful.tag.viewonly),
                     awful.button({ modkey }, 1, awful.client.movetotag),
                     awful.button({ }, 3, awful.tag.viewtoggle),
@@ -185,8 +186,8 @@ taglist.buttons = awful.util.table.join(
                     awful.button({ }, 4, awful.tag.viewnext),
                     awful.button({ }, 5, awful.tag.viewprev))
 
-local tasklist = {}
-tasklist.buttons = awful.util.table.join(
+local mytasklist = {}
+mytasklist.buttons = awful.util.table.join(
                 awful.button({ }, 1,
                         function(c)
                                 if not c:isvisible() then
@@ -222,10 +223,10 @@ tasklist.buttons = awful.util.table.join(
 
 for s = 1, screen.count() do
     -- Create a promptbox
-    promptbox[s] = awful.widget.prompt()
+    mypromptbox[s] = awful.widget.prompt()
     -- Create a layoutbox
-    layoutbox[s] = awful.widget.layoutbox(s)
-    layoutbox[s]:buttons(awful.util.table.join(
+    mylayoutbox[s] = awful.widget.layoutbox(s)
+    mylayoutbox[s]:buttons(awful.util.table.join(
                            awful.button({ }, 1, function () awful.layout.inc(layouts, 1) end),
                            awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end),
                            awful.button({ }, 4, function () awful.layout.inc(layouts, 1) end),
@@ -233,63 +234,69 @@ for s = 1, screen.count() do
     ))
 
     -- Create a taglist widget
-    taglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, taglist.buttons)
+    mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
 
     -- Create a tasklist widget
-    tasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, tasklist.buttons)
+    mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons)
 
     -- Create the wibox
-    -- wibox[s] = awful.wibox({
-    --     position = "top", screen = s,
-    --     fg = beautiful.fg_normal, bg = beautiful.bg_normal, height=beautiful.widget_height
-    -- })
-    -- Create the wibox
-    wibox[s] = awful.wibox({ position = "top", screen = s })
+    mywibox[s] = awful.wibox({
+        -- Change screen = 1/2 to switch screens, or s for both
+        position = "top", screen = s,
+        fg = beautiful.fg_normal, bg = beautiful.bg_normal, height=beautiful.widget_height
+    })
     --
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
-    left_layout:add(launcher)
-    left_layout:add(taglist[s])
-    left_layout:add(layoutbox[s])
-    left_layout:add(promptbox[s])
-    left_layout:add(layout[s])
+    left_layout:add(mylauncher)
+    left_layout:add(mytaglist[s])
+    left_layout:add(mylayoutbox[s])
+    left_layout:add(mypromptbox[s])
     
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(spacer)
     right_layout:add(datewidget)
-    right_layout:add(seperator)
+    right_layout:add(separator)
     right_layout:add(volwidget)
-    right_layout:add(seperator)
+    right_layout:add(separator)
     right_layout:add(cpuwidget)
-    right_layout:add(seperator)
+    right_layout:add(separator)
     right_layout:add(thermalwidget)
     
     -- Now bring it all together (with the tasklist in the middle)
     local layout = wibox.layout.align.horizontal()
     layout:set_left(left_layout)
-    layout:set_middle(tasklist[s])
+    right_layout:add(spacer)
+    layout:set_middle(mytasklist[s])
+    right_layout:add(separator)
     layout:set_right(right_layout)
     --
+
+    mywibox[s]:set_widget(layout)
 end
 -- }}}
 
 -- {{{ Bottom Box
-local bottomwibox = {}
+local mybottomwibox = {}
 
-for s = 1, screen.count() do
+-- Change to s = 1 or 2 to switch between screens
+for s = 2, screen.count() do
     -- Create the wibox
-    bottomwibox[s] = awful.wibox({
-        position = "bottom", screen = 1,
+    mybottomwibox[s] = awful.wibox({
+        position = "bottom", screen = 2,
         fg = beautiful.fg_normal, bg = beautiful.bg_normal, height=beautiful.widget_height
     })
 
+    -- Widgets that are aligned to the left
+    local bottom_left_layout = wibox.layout.fixed.horizontal()
+    bottom_left_layout:add(spacer)
+    bottom_left_layout:add(uptimewidget)
+    bottom_left_layout:add(separator)
+    bottom_left_layout:add(pacwidget)
     -- Add widgets to the wibox
-    bottomwibox[s].widgets = {
-        spacer, uptimewidget, separator, pacwidget, 
-        layout = awful.widget.layout.horizontal.leftright
-    }
+    mybottomwibox[s]:set_widget(bottom_left_layout)
 end
 
 -- }}}
@@ -372,12 +379,12 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
     -- Prompt
-    awful.key({ modkey },     "p",     function () promptbox[mouse.screen]:run() end),
+    awful.key({ modkey },     "p",     function () mypromptbox[mouse.screen]:run() end),
     -- Run stuff in a Terminal
     awful.key({ modkey }, "x", 
     function ()
      awful.prompt.run({ prompt = "Run in Terminal: " }, 
-     promptbox[mouse.screen].widget,
+     mypromptbox[mouse.screen].widget,
      function (prog)
       sexec(terminal .. " -name " .. prog .. " -e /bin/zsh -c " .. prog)
      end)
@@ -524,7 +531,3 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
--- {{{ Multiple Monitors 
--- }}}
-

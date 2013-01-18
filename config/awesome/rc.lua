@@ -19,7 +19,9 @@ local exec   = awful.util.spawn_with_shell
 local sexec  = awful.util.spawn_with_shell
 
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/atilton2/.config/awesome/themes/sky/theme.lua")
+-- beautiful.init("~/.config/awesome/themes/default/theme.lua")
+beautiful.init("/usr/share/awesome/themes/sky/theme.lua")
+-- beautiful.init("/home/atilton2/.config/awesome/themes/sky/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvtc"
@@ -83,11 +85,9 @@ for s = 1, screen.count() do
     -- Each screen has its own tag table.
     tags[s] = awful.tag({ 
      "1 systerm", "2 sysweb", "3 workterm", 
-     "4 workweb", "5 misc", "6 misc", 
-     "7 misc", "8 misc", "9 misc"}, s,
+     "4 workweb"}, s,
     {layouts[3], layouts[1], layouts[1], -- Tags: 1, 2, 3
-     layouts[1], layouts[1], layouts[1], --       4, 5 ,6
-     layouts[1], layouts[1], layouts[1]  --       7, 8, 9
+     layouts[1]
     })
 end
 -- }}}

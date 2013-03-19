@@ -95,6 +95,9 @@ set hlsearch              " highlight all searched-for phrases
 set ignorecase            " case ignored in search
 set smartcase             " case ignored unless upper case used
 set magic                 " magic on
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Completion

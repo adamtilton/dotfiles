@@ -167,7 +167,7 @@ vicious.register(pacwidget, vicious.widgets.pkg,
                     pacwidget_t:set_text(str)
                     s:close()
                     return string.format("<span foreground='#e2eeea'>updates: </span><span foreground='#2e3436'>%d</span>", args[1])
-                end, 1800, "Arch")
+                end, 60, "Arch")
 
                 --'1800' means check every 30 minutes
 -- }}}

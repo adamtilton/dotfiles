@@ -20,8 +20,8 @@ local sexec  = awful.util.spawn_with_shell
 
 -- Themes define colours, icons, and wallpapers
 -- beautiful.init("~/.config/awesome/themes/default/theme.lua")
-beautiful.init("/usr/share/awesome/themes/sky/theme.lua")
--- beautiful.init("/home/atilton2/.config/awesome/themes/sky/theme.lua")
+-- beautiful.init("/usr/share/awesome/themes/sky/theme.lua")
+beautiful.init("/home/atilton2/.config/awesome/themes/sky/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvtc"

@@ -47,3 +47,7 @@ if [ "$TERM" = "linux" ]; then
     done
     clear
 fi
+
+function cd {
+    builtin cd "$@" && ls -alh
+  }

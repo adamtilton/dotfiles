@@ -34,10 +34,12 @@ filetype on             " enable filetype plugins
 filetype indent on
 filetype plugin on
 set t_Co=256
+" let g:solarized_termcolors=256
 syntax on                   " syntax highlighting on
-colorscheme fu 
-set showmatch             " show matching paren when bracked inserted
+" colorscheme fu 
 set background=dark
+colorscheme solarized 
+set showmatch             " show matching paren when bracked inserted
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Movement

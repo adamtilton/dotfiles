@@ -56,8 +56,14 @@ source $HOME/.zsh/01_aliases
 
 # Set vi mode
 bindkey -v
+
+# History search with up/down arrow
 bindkey '\e[A'  history-search-backward
 bindkey '\e[B'  history-search-forward
+
+# History scroll with pageup/pagedown
+[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
+[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
 
 # Customize to your needs...
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

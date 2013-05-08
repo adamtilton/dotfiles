@@ -1,3 +1,0 @@
-urxvt*boldColors: on
-urxvt*font:	xft:Inconsolata:pixelsize=18:antialias=true:hinting=true:medium
-urxvt*boldFont:	xft:Inconsolata:pixelsize=18:antialias=true:hinting=true:bold

@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/atilton2/research/projects/MehtaData/TheWoods/pyprocessing-experiments/alhambra'
 let g:netrw_dirhist_2='/home/atilton2/research/projects/MehtaData/TheWoods/pyprocessing-experiments/3DSketches'
 let g:netrw_dirhist_3='/home/atilton2/research/projects/MehtaData/TheWoods/pyprocessing-experiments/raytracing'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/atilton2/research/projects/MehtaData/TheWoods/pypro
 let g:netrw_dirhist_5='/home/atilton2/research/projects/MehtaData/TheWoods/usage'
 let g:netrw_dirhist_6='/home/atilton2/.urxvt'
 let g:netrw_dirhist_7='/home/atilton2/.fontconfig'
+let g:netrw_dirhist_8='/Users/Tilton/dotfiles/.vim/bundle/syntastic'

@@ -1,0 +1,16 @@
+(dp1
+Vmin(points, 1)
+p2
+I247
+sVmin(points[1])
+p3
+I240
+sVD
+I90
+sVA{'one']
+p4
+I140
+sVnp.sum(C[:,0])
+p5
+I171
+s.

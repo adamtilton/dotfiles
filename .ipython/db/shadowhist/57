@@ -1,0 +1,13 @@
+(dp1
+Vnp.fliplr(A)
+p2
+I35
+sV((a == 'b') | (a == 'a')) | ((b == 'b') | (b == 'a'))
+p3
+I197
+sVV
+I271
+sVnot A
+p4
+I204
+s.

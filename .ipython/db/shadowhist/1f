@@ -1,0 +1,8 @@
+(dp1
+Vnp.minimum(A, 1)
+p2
+I261
+sVsorted(A.iteritems(), key=operator.itemgetter(1))
+p3
+I133
+s.

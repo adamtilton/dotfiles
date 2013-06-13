@@ -1,0 +1,104 @@
+A = np.array([1, 2, 3, 4, 5])
+import numpy as np
+help(np.r_)
+A = np.array([1, 2, 3, 4, 5])
+import numpy as np
+A = np.array([1, 2, 3, 4, 5])
+np.flipud(A)
+np.fliplr(A)
+y = np.array([1, 2, 3, 4, 5])
+81         fistvals = np.flipud(y)                                                                                   | 60         raise TypeError("window_size size must be a positive odd number")                                         
+ 82         lastvales = np.flipud(y)                                                                                  | 61     if window_size < order + 2:                                                                                   
+fistvals = np.flipud(y)                                                                                               | 60         raise TypeError("window_size size must be a positive odd number")                                         
+lastvales = np.flipud(y)                                                                                              | 61     if window_size < order + 2:                                                                                   
+y = np.concatenate((firstvals, y, lastvals))   
+fistvals = np.flipud(y)                                                                                               | 60         raise TypeError("window_size size must be a positive odd number")                                         
+fistvals = np.flipud(y)                                                                                               | 60         raise TypeError("window_size size must be a positive odd number")                              
+y
+y = np.concatenate(np.flipud(y), y, np.flipud(y))
+y = np.concatenate((np.flipud(y), y, np.flipud(y)))
+y
+y = np.concatenate((np.flipud(y[1:]), y, np.flipud(y[:-2])))
+y
+y = np.array([1, 2, 3, 4, 5])
+A = np.concatenate((np.flipud(y[1:]), y, np.flipud(y[:-2])))
+A
+A = np.concatenate((np.flipud(y[1:]), y, np.flipud(y[:-1])))
+A
+len(y)
+len(A0
+len(A)
+A[len(y)]
+A[len(y)-1]
+A[2*(len(y)-1)]
+3!
+$6!$
+import math as m
+m.factorial(6)
+m.factorial(1)
+import math as m
+m.floor(2)
+m.factorial(2)
+version
+--verson
+iV
+-v
+iV
+y
+import math as m
+a = 'a'
+(a == 'b')
+(a == 'b') | (a == 'a')
+((a == 'b') | (a == 'a'))
+b = 'b'
+((a == 'b') | (a == 'a')) | ((b == 'b') | b == 'a'))
+((a == 'b') | (a == 'a')) | ((b == 'b') | (b == 'a'))
+((a == 'b') | (a == 'c')) | ((b == 'b') | (b == 'a'))
+((a == 'b') | (a == 'c')) | ((b == 'c') | (b == 'a'))
+A = True
+!A
+~A
+A
+~A
+A
+A'
+not A
+index = [(False, 'p1'), (False, 'p2'), (True, 'h1'), (True, 'h2')]
+index
+index[1]
+index[:]
+index[:][0]
+index[:,0]
+index[:-1,0]
+index[:-1,1]
+index[-1,1]
+index[1][1]
+index[1][:]
+index[:][:]
+index[:][0]
+index = [(False, 'p1'), (False, 'p2'), (True, 'h1'), (False, 'ep'), (True, 'h2')]
+points = [(False, 'p1'), (False, 'p2'), (True, 'h1'), (False, 'ep'), (True, 'h2')]
+A = []
+A.append({'A' : 'a', 'B' : 'b'})
+A
+A.append({'A' : 'c', 'B' : 'd'})
+A
+A[0]
+OrderedDict(A)
+y
+from numpy impor *
+from numpy import *
+regions = [[],[]]
+regions[0].append(1, 2, 3, 4)
+regions[0].append((1, 2, 3, 4))
+regions
+for region in regions:
+    print region
+    
+for one, two, three, four in regions:
+    print one, two three four
+for one, two, three, four in regions:
+        print one, two, three, four
+    
+2*pi
+exit

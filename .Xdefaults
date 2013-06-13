@@ -33,7 +33,13 @@ URxvt.internalBorder:       6
 !! URxvt.visualBell:           true
  
 ! Fonts
-#include "/home/atilton2/.config/xresources/fonts"
+urxvt*boldColors: on
+!!!! Ubuntu
+URxvt*font:        xft:ubuntu mono:size=13:style=medium:antialias=true
+URxvt*boldFont:    xft:ubuntu mono:size=13:style=medium:antialias=true
+! Inonsolata
+! urxvt*font: xft:Inconsolata:pixelsize=18:antialias=true:hinting=true:medium
+! urxvt*boldFont: xft:Inconsolata:pixelsize=18:antialias=true:hinting=true:bold
  
 ! Scrollbar
 URxvt.scrollStyle:          rxvt

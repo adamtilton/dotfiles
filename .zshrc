@@ -85,3 +85,6 @@ fi
 function cd {
     builtin cd "$@" && ls -alh
   }
+
+export TERM="screen-256color"
+alias tmux="tmux -2"

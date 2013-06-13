@@ -1,9 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/atilton2/research/projects/MehtaData/TheWoods/pyprocessing-experiments/alhambra'
-let g:netrw_dirhist_2='/home/atilton2/research/projects/MehtaData/TheWoods/pyprocessing-experiments/3DSketches'
-let g:netrw_dirhist_3='/home/atilton2/research/projects/MehtaData/TheWoods/pyprocessing-experiments/raytracing'
-let g:netrw_dirhist_4='/home/atilton2/research/projects/MehtaData/TheWoods/pyprocessing-experiments/3DSketches'
-let g:netrw_dirhist_5='/home/atilton2/research/projects/MehtaData/TheWoods/usage'
-let g:netrw_dirhist_6='/home/atilton2/.urxvt'
-let g:netrw_dirhist_7='/home/atilton2/.fontconfig'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/adam/Dropbox/Adam Tilton/ACC_2013_presentation/figs_hopf/simulation_figs'
+let g:netrw_dirhist_2='/media/adam/9c2c4092-d1dd-4089-b6c1-e10910777514/atilton2/.ipython/profile_default'
+let g:netrw_dirhist_3='/home/adam/Dropbox/Adam Tilton/ACC_2013_presentation'
+let g:netrw_dirhist_4='/home/adam/Dropbox/Adam Tilton/ACC_2013_presentation/figs_hopf'
+let g:netrw_dirhist_5='/home/adam/Dropbox/Adam Tilton/ACC_2013_presentation/figs_hopf/simulation_figs'
+let g:netrw_dirhist_6='/home/adam/Dropbox/Adam Tilton/ACC_2013_presentation/figs_hopf/simulation_figs/example_01'

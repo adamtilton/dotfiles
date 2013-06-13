@@ -1,0 +1,11 @@
+(dp1
+Vc.shape=(2,1)
+p2
+I103
+sVfor x in a:
+p3
+I114
+sV((a == 'b') | (a == 'a')) | ((b == 'b') | b == 'a'))
+p4
+I196
+s.

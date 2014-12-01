@@ -48,11 +48,23 @@ plugins=(git github archlinux python svn terminator)
 
 source $ZSH/oh-my-zsh.sh
 
-# Add FilterPy to python's path 
+# Add custom library path to python's path 
 export PYTHONPATH=$HOME/src/python:$PYTHONPATH
 
 # Source aliases
 source $HOME/.zsh/01_aliases
+
+# Homebrew Path
+export PATH=/usr/local/bin:$PATH
+
+# Rabbitmq Path
+export PATH=$PATH:/usr/local/sbin
+
+# Add Android tolls
+export PATH=$PATH:/Users/adamtilton/src/adt-bundle-mac-x86_64-20140702/sdk/platform-tools
+
+# Add ndk tools
+export PATH=$PATH:/Users/adamtilton/src/android-ndk-r10
 
 # Set vi mode
 bindkey -v
@@ -61,17 +73,13 @@ bindkey -v
 bindkey '\e[A'  history-search-backward
 bindkey '\e[B'  history-search-forward
 
+bindkey "^R" history-incremental-search-backward
+
 # History scroll with pageup/pagedown
 # [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
 # [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
 
 # Customize to your needs...
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-# Add Ruby Gems to path
-PATH=$PATH:$HOME/.gem/ruby/1.9.1/bin 
-
 if [ "$TERM" = "linux" ]; then
     _SEDCMD='s/.*\*color\([0-9]\{1,\}\).*#\([0-9a-fA-F]\{6\}\).*/\1 \2/p'
     for i in $(sed -n "$_SEDCMD" $HOME/.Xdefaults | \
@@ -88,3 +96,10 @@ function cd {
 
 export TERM="screen-256color"
 alias tmux="tmux -2"
+
+export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH=/usr/local/Cellar/libffi/3.0.13/lib/pkgconfig:$PKG_CONFIG_PATH
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
